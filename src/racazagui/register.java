@@ -255,7 +255,8 @@ public class register extends javax.swing.JFrame {
   
     }
     private void rescancelbutton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rescancelbutton2ActionPerformed
-  
+new login().setVisible(true);
+this.dispose();
     }//GEN-LAST:event_rescancelbutton2ActionPerformed
 
     private void fnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fnActionPerformed

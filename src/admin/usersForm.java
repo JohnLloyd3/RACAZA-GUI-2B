@@ -8,6 +8,7 @@ package admin;
 import config.dbConnector;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import javax.swing.JOptionPane;
 import net.proteanit.sql.DbUtils;
 
 /**
@@ -48,7 +49,9 @@ public class usersForm extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         navigation = new javax.swing.JPanel();
         WELCOME3 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        back = new javax.swing.JButton();
+        Active = new javax.swing.JButton();
+        Pending = new javax.swing.JButton();
         logo = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         usersTable = new javax.swing.JTable();
@@ -66,20 +69,37 @@ public class usersForm extends javax.swing.JFrame {
         WELCOME3.setForeground(new java.awt.Color(255, 255, 255));
         WELCOME3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         WELCOME3.setText("USERS FORM");
-        navigation.add(WELCOME3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 420, 80));
+        navigation.add(WELCOME3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 440, 100));
 
-        jLabel1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("BACK");
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
+        back.setBackground(new java.awt.Color(255, 255, 255));
+        back.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        back.setText("BACK");
+        back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backActionPerformed(evt);
             }
         });
-        navigation.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 0, 140, 90));
+        navigation.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 70, 100, 40));
 
-        jPanel1.add(navigation, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1150, 90));
+        Active.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        Active.setText("Active");
+        Active.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ActiveActionPerformed(evt);
+            }
+        });
+        navigation.add(Active, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 40, 80, 30));
+
+        Pending.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        Pending.setText("Pending");
+        Pending.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PendingActionPerformed(evt);
+            }
+        });
+        navigation.add(Pending, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 40, 90, 30));
+
+        jPanel1.add(navigation, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1150, 110));
 
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.jpg"))); // NOI18N
         jPanel1.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-130, 120, 560, 570));
@@ -95,7 +115,7 @@ public class usersForm extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(usersTable);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 90, 630, 600));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 110, 620, 600));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -7, 1050, 690));
 
@@ -103,11 +123,19 @@ public class usersForm extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-        admindashboard ads = new admindashboard();
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
+            admindashboard ads = new admindashboard();
         ads.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jLabel1MouseClicked
+    }//GEN-LAST:event_backActionPerformed
+
+    private void ActiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActiveActionPerformed
+   
+    }//GEN-LAST:event_ActiveActionPerformed
+
+    private void PendingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PendingActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PendingActionPerformed
 
     /**
      * @param args the command line arguments
@@ -146,8 +174,10 @@ public class usersForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Active;
+    private javax.swing.JButton Pending;
     private javax.swing.JLabel WELCOME3;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton back;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel logo;

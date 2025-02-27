@@ -5,6 +5,8 @@
  */
 package user;
 
+import racazagui.login;
+
 /**
  *
  * @author johnlloyd
@@ -31,6 +33,7 @@ public class userDashboard extends javax.swing.JFrame {
         navigation = new javax.swing.JPanel();
         WELCOME3 = new javax.swing.JLabel();
         logo = new javax.swing.JLabel();
+        lgo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -51,6 +54,18 @@ public class userDashboard extends javax.swing.JFrame {
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.jpg"))); // NOI18N
         jPanel1.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-130, 120, 560, 580));
 
+        lgo.setBackground(new java.awt.Color(255, 255, 255));
+        lgo.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lgo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lgo.setText("Log Out");
+        lgo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        lgo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lgoMouseClicked(evt);
+            }
+        });
+        jPanel1.add(lgo, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 120, 110, 50));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -69,6 +84,13 @@ public class userDashboard extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void lgoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lgoMouseClicked
+ new login().setVisible(true);
+ this.dispose();
+ 
+// TODO add your handling code here:
+    }//GEN-LAST:event_lgoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -108,6 +130,7 @@ public class userDashboard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel WELCOME3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lgo;
     private javax.swing.JLabel logo;
     private javax.swing.JPanel navigation;
     // End of variables declaration//GEN-END:variables

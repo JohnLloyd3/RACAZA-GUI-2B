@@ -5,6 +5,8 @@
  */
 package admin;
 
+import racazagui.login;
+
 /**
  *
  * @author johnlloyd
@@ -34,6 +36,7 @@ public class admindashboard extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        lgo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -65,17 +68,29 @@ public class admindashboard extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/users icon (2).png"))); // NOI18N
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(30, 0, 200, 200);
+        jLabel2.setBounds(0, 0, 190, 160);
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("User");
         jPanel2.add(jLabel1);
-        jLabel1.setBounds(110, 210, 52, 29);
+        jLabel1.setBounds(80, 160, 52, 29);
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 120, 260, 240));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 130, 190, 190));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -7, 1050, 690));
+        lgo.setBackground(new java.awt.Color(255, 255, 255));
+        lgo.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lgo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lgo.setText("Log Out");
+        lgo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        lgo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lgoMouseClicked(evt);
+            }
+        });
+        jPanel1.add(lgo, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 120, 110, 50));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -7, 1030, 690));
 
         pack();
         setLocationRelativeTo(null);
@@ -86,6 +101,13 @@ public class admindashboard extends javax.swing.JFrame {
         usf.setVisible(true);
         this.dispose();           
     }//GEN-LAST:event_jPanel2MouseClicked
+
+    private void lgoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lgoMouseClicked
+        new login().setVisible(true);
+        this.dispose();
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lgoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -128,6 +150,7 @@ public class admindashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel lgo;
     private javax.swing.JLabel logo;
     private javax.swing.JPanel navigation;
     // End of variables declaration//GEN-END:variables

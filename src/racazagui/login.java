@@ -124,7 +124,7 @@ public class login extends javax.swing.JFrame {
         background.add(clickheretoregister, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 570, 300, 50));
 
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.jpg"))); // NOI18N
-        background.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-100, 130, 590, 570));
+        background.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-100, 120, 590, 580));
 
         us.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         us.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -143,27 +143,32 @@ public class login extends javax.swing.JFrame {
 
     private void loginbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginbuttonActionPerformed
    
-       if(loginAcc(us.getText(),ps.getText())){
-           if(!status.equals("Active")){
+        if(loginAcc(us.getText(),ps.getText())){
+           
+             
+        if(!status.equals("Active")){
       JOptionPane.showMessageDialog(null,"In-Active Account,Contact the Admin!");
-     }else{
+     
+             
+        }else{
       
-      if(type.equals("Admin")){
-              
+        if(type.equals("Admin")){
               JOptionPane.showMessageDialog(null,"Login Successfully!");
               admindashboard ads = new admindashboard();
               ads.setVisible(true);
               this.dispose();
-      }else if(type.equals("User")){
+        
+        }else if(type.equals("User")){
           JOptionPane.showMessageDialog(null,"Login Successfully!");
           userDashboard usd = new userDashboard();
               usd.setVisible(true);
               this.dispose();   
-      }else{
+        }else{
       JOptionPane.showMessageDialog(null,"No Account Type Found,Contact the Admin!");
-      }
-}
-     }else{ 
+        }
+        }
+        
+        }else{ 
          JOptionPane.showMessageDialog(null,"Invalid Account!");
      }
     }//GEN-LAST:event_loginbuttonActionPerformed
