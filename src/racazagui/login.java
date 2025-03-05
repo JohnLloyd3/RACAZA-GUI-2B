@@ -6,6 +6,7 @@
 package racazagui;
 
 import admin.admindashboard;
+import config.Session;
 import config.dbConnector;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -29,6 +30,7 @@ public class login extends javax.swing.JFrame {
     static String status;
     static String type;
     
+    
     public static boolean loginAcc(String username,String password){
         dbConnector connector = new dbConnector();
         try{
@@ -37,6 +39,14 @@ public class login extends javax.swing.JFrame {
             if( resultSet.next()){
             status = resultSet.getString("u_status");
             type = resultSet.getString("u_type");
+             Session sess = Session.getInstance();
+            sess.setUid(resultSet.getInt("u_id"));
+            sess.setFname(resultSet.getString("u_firstname"));
+            sess.setLname(resultSet.getString("u_lastname"));
+            sess.setEmail(resultSet.getString("u_email"));
+            sess.setType(resultSet.getString("u_type"));
+            sess.setStatus(resultSet.getString("u_status"));
+
             return true;
             }else{
                 return false;
@@ -61,11 +71,11 @@ public class login extends javax.swing.JFrame {
         WELCOME3 = new javax.swing.JLabel();
         pstext = new javax.swing.JLabel();
         ustext = new javax.swing.JLabel();
-        ps = new javax.swing.JTextField();
         loginbutton = new javax.swing.JButton();
         clickheretoregister = new javax.swing.JLabel();
         logo = new javax.swing.JLabel();
         us = new javax.swing.JTextField();
+        ps = new javax.swing.JPasswordField();
 
         jCheckBox1.setText("jCheckBox1");
 
@@ -93,15 +103,6 @@ public class login extends javax.swing.JFrame {
         ustext.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         ustext.setText("USERNAME:");
         background.add(ustext, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 270, 160, 50));
-
-        ps.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        ps.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ps.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                psActionPerformed(evt);
-            }
-        });
-        background.add(ps, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 420, 450, 50));
 
         loginbutton.setBackground(new java.awt.Color(204, 204, 255));
         loginbutton.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -135,6 +136,9 @@ public class login extends javax.swing.JFrame {
         });
         background.add(us, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 320, 450, 50));
 
+        ps.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        background.add(ps, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 420, 450, 50));
+
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -10, 1020, 710));
 
         pack();
@@ -142,7 +146,9 @@ public class login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginbuttonActionPerformed
-   
+
+        
+        
         if(loginAcc(us.getText(),ps.getText())){
            
              
@@ -183,10 +189,6 @@ public class login extends javax.swing.JFrame {
 
 // TODO add your handling code here:
     }//GEN-LAST:event_clickheretoregisterMouseClicked
-
-    private void psActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_psActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_psActionPerformed
 
     private void usActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usActionPerformed
         // TODO add your handling code here:
@@ -235,7 +237,7 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JButton loginbutton;
     private javax.swing.JLabel logo;
     private javax.swing.JPanel navigation;
-    private javax.swing.JTextField ps;
+    private javax.swing.JPasswordField ps;
     private javax.swing.JLabel pstext;
     private javax.swing.JTextField us;
     private javax.swing.JLabel ustext;

@@ -66,7 +66,6 @@ public class register extends javax.swing.JFrame {
         registrationformtext = new javax.swing.JLabel();
         attext = new javax.swing.JLabel();
         resfntext = new javax.swing.JLabel();
-        ps = new javax.swing.JTextField();
         reslntext = new javax.swing.JLabel();
         resemailtext = new javax.swing.JLabel();
         resusrntext = new javax.swing.JLabel();
@@ -79,6 +78,7 @@ public class register extends javax.swing.JFrame {
         logo1 = new javax.swing.JLabel();
         us = new javax.swing.JTextField();
         at = new javax.swing.JComboBox<>();
+        ps = new javax.swing.JPasswordField();
 
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.jpg"))); // NOI18N
 
@@ -94,9 +94,9 @@ public class register extends javax.swing.JFrame {
         registrationformtext.setForeground(new java.awt.Color(255, 255, 255));
         registrationformtext.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         registrationformtext.setText("REGISTRATION FORM");
-        rgnavigation.add(registrationformtext, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 110));
+        rgnavigation.add(registrationformtext, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 60));
 
-        background.add(rgnavigation, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 110));
+        background.add(rgnavigation, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 80));
 
         attext.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         attext.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -107,15 +107,6 @@ public class register extends javax.swing.JFrame {
         resfntext.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         resfntext.setText("First Name:");
         background.add(resfntext, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 130, 450, 40));
-
-        ps.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        ps.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ps.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                psActionPerformed(evt);
-            }
-        });
-        background.add(ps, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 470, 450, 40));
 
         reslntext.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         reslntext.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -183,7 +174,7 @@ public class register extends javax.swing.JFrame {
         background.add(resps1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 430, 450, 40));
 
         logo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.jpg"))); // NOI18N
-        background.add(logo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-80, 110, 620, 620));
+        background.add(logo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-90, 110, 620, 620));
 
         us.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         us.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -202,6 +193,14 @@ public class register extends javax.swing.JFrame {
             }
         });
         background.add(at, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 550, 450, 50));
+
+        ps.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        ps.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                psActionPerformed(evt);
+            }
+        });
+        background.add(ps, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 470, 450, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -268,12 +267,6 @@ this.dispose();
     String lastName = ln.getText();  // ✅ Correct
     }//GEN-LAST:event_lnActionPerformed
 
-    private void psActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_psActionPerformed
-        
-          String password = ps.getText();  // ✅ Correct
-        
-    }//GEN-LAST:event_psActionPerformed
-
     private void emActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emActionPerformed
   String email = em.getText().trim();  // ✅ Correct              
          dbConnector dbc = new dbConnector();       
@@ -294,6 +287,10 @@ this.dispose();
     private void atActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_atActionPerformed
+
+    private void psActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_psActionPerformed
+     String password = ps.getText();  // 
+    }//GEN-LAST:event_psActionPerformed
 
     /**
      * @param args the command line arguments
@@ -339,7 +336,7 @@ this.dispose();
     private javax.swing.JTextField ln;
     private javax.swing.JLabel logo;
     private javax.swing.JLabel logo1;
-    private javax.swing.JTextField ps;
+    private javax.swing.JPasswordField ps;
     private javax.swing.JLabel registrationformtext;
     private javax.swing.JButton rescancelbutton2;
     private javax.swing.JLabel resemailtext;

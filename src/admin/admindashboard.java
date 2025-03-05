@@ -5,6 +5,8 @@
  */
 package admin;
 
+import config.Session;
+import javax.swing.JOptionPane;
 import racazagui.login;
 
 /**
@@ -31,14 +33,23 @@ public class admindashboard extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         navigation = new javax.swing.JPanel();
-        WELCOME3 = new javax.swing.JLabel();
-        logo = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        aa = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        acc_lname = new javax.swing.JLabel();
+        acc_fname = new javax.swing.JLabel();
+        userstable = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        navigation1 = new javax.swing.JPanel();
+        WELCOME4 = new javax.swing.JLabel();
         lgo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -47,66 +58,98 @@ public class admindashboard extends javax.swing.JFrame {
         navigation.setBackground(new java.awt.Color(0, 0, 0));
         navigation.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        WELCOME3.setFont(new java.awt.Font("HP Simplified Jpan", 0, 48)); // NOI18N
-        WELCOME3.setForeground(new java.awt.Color(255, 255, 255));
-        WELCOME3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        WELCOME3.setText("WELCOME TO ADMIN DASHBOARD");
-        navigation.add(WELCOME3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1050, 120));
+        aa.setBackground(new java.awt.Color(0, 0, 0));
 
-        jPanel1.add(navigation, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1150, 120));
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add-removebg-preview (1).png"))); // NOI18N
+        aa.add(jLabel1);
 
-        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.jpg"))); // NOI18N
-        jPanel1.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-130, 120, 560, 580));
+        acc_lname.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        acc_lname.setForeground(new java.awt.Color(255, 255, 255));
+        acc_lname.setText("ADMIN");
+        aa.add(acc_lname);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
+        acc_fname.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        acc_fname.setForeground(new java.awt.Color(255, 255, 255));
+        acc_fname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        acc_fname.setText("ADMIN");
+        aa.add(acc_fname);
+
+        navigation.add(aa, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 180, 270));
+
+        jPanel1.add(navigation, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 260, 630));
+
+        userstable.setBackground(new java.awt.Color(255, 255, 255));
+        userstable.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel2MouseClicked(evt);
+                userstableMouseClicked(evt);
             }
         });
-        jPanel2.setLayout(null);
+        userstable.setLayout(null);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/users icon (2).png"))); // NOI18N
-        jPanel2.add(jLabel2);
-        jLabel2.setBounds(0, 0, 190, 160);
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("USERS");
+        userstable.add(jLabel2);
+        jLabel2.setBounds(60, 140, 80, 50);
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("User");
-        jPanel2.add(jLabel1);
-        jLabel1.setBounds(80, 160, 52, 29);
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user11-removebg-preview.png"))); // NOI18N
+        userstable.add(jLabel4);
+        jLabel4.setBounds(0, 30, 190, 110);
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 130, 190, 190));
+        jPanel1.add(userstable, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 100, 190, 180));
+
+        navigation1.setBackground(new java.awt.Color(0, 0, 0));
+        navigation1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        WELCOME4.setFont(new java.awt.Font("HP Simplified Jpan", 0, 36)); // NOI18N
+        WELCOME4.setForeground(new java.awt.Color(255, 255, 255));
+        WELCOME4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        WELCOME4.setText("ADMIN DASHBOARD");
+        navigation1.add(WELCOME4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 330, 70));
 
         lgo.setBackground(new java.awt.Color(255, 255, 255));
-        lgo.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lgo.setFont(new java.awt.Font("HP Simplified Jpan", 0, 24)); // NOI18N
+        lgo.setForeground(new java.awt.Color(255, 255, 255));
         lgo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lgo.setText("Log Out");
-        lgo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        lgo.setText("LOGOUT");
         lgo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lgoMouseClicked(evt);
             }
         });
-        jPanel1.add(lgo, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 120, 110, 50));
+        navigation1.add(lgo, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 20, 120, 70));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -7, 1030, 690));
+        jPanel1.add(navigation1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 1150, 90));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 1030, 690));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseClicked
+    private void userstableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userstableMouseClicked
         usersForm usf  = new usersForm();
         usf.setVisible(true);
         this.dispose();           
-    }//GEN-LAST:event_jPanel2MouseClicked
+    }//GEN-LAST:event_userstableMouseClicked
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+       Session sess = Session.getInstance();
+       if(sess.getUid()==0){
+         JOptionPane.showMessageDialog(null,"No Account, Log in First!");
+           login lg = new login ();
+         lg.setVisible(true);
+         this.dispose();       
+       }else {
+           acc_fname.setText(""+sess.getFname());
+           acc_lname.setText(""+sess.getLname());
+       }
+    }//GEN-LAST:event_formWindowActivated
 
     private void lgoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lgoMouseClicked
-        new login().setVisible(true);
-        this.dispose();
-
-        // TODO add your handling code here:
+ new login().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_lgoMouseClicked
 
     /**
@@ -145,13 +188,17 @@ public class admindashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel WELCOME3;
+    private javax.swing.JLabel WELCOME4;
+    private javax.swing.JPanel aa;
+    private javax.swing.JLabel acc_fname;
+    private javax.swing.JLabel acc_lname;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lgo;
-    private javax.swing.JLabel logo;
     private javax.swing.JPanel navigation;
+    private javax.swing.JPanel navigation1;
+    private javax.swing.JPanel userstable;
     // End of variables declaration//GEN-END:variables
 }
