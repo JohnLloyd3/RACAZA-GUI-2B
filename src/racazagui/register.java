@@ -7,6 +7,8 @@ package racazagui;
 
 
 import config.dbConnector;
+import config.passwordHasher;
+import java.security.NoSuchAlgorithmException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -235,10 +237,13 @@ public class register extends javax.swing.JFrame {
                
         }else{ 
             dbConnector dbc = new dbConnector();
+            try{
+            String pass = passwordHasher.hashPassword(ps.getText());
+            
             if(dbc.insertData("INSERT INTO tbl_user (u_firstname, u_lastname, u_email,"
                 + " u_username, u_password, u_type, u_status) "
                 + "VALUES ('"+ fn.getText() + "','" + ln.getText() + "','" + em.getText()
-                + "','" + us.getText() + "','" + ps.getText() + "','" +
+                + "','" + us.getText() + "','" + pass + "','" +
                 at.getSelectedItem() + "','Pending')")>0){
             
             
@@ -250,6 +255,9 @@ public class register extends javax.swing.JFrame {
         }else {
                 JOptionPane.showMessageDialog(null, "Connection Error!"); 
                 }
+            }catch(NoSuchAlgorithmException ex){
+                System.out.println(""+ex);
+            }
     }//GEN-LAST:event_resloginbuttonActionPerformed
   
     }

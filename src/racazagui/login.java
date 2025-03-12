@@ -8,6 +8,8 @@ package racazagui;
 import admin.admindashboard;
 import config.Session;
 import config.dbConnector;
+import config.passwordHasher;
+import java.security.NoSuchAlgorithmException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -19,9 +21,7 @@ import user.userDashboard;
  */
 public class login extends javax.swing.JFrame {
 
-    /**
-     * Creates new form login
-     */
+    
     public login() {
         initComponents();
         this.setResizable(false);
@@ -34,10 +34,18 @@ public class login extends javax.swing.JFrame {
     public static boolean loginAcc(String username,String password){
         dbConnector connector = new dbConnector();
         try{
-            String query = "SELECT * FROM tbl_user WHERE u_username = '" + username + "' AND u_password = '" + password + "'";  
+            String query = "SELECT * FROM tbl_user WHERE u_username = '" + username + "'";  
             ResultSet resultSet = connector.getData(query);
-            if( resultSet.next()){
-            status = resultSet.getString("u_status");
+            
+          if( resultSet.next()){
+              
+                String hashedPass = (resultSet.getString("u_password"));    
+                String rehashedPass = passwordHasher.hashPassword(password); 
+                
+                System.out.println(""+ hashedPass);
+                System.out.println(""+ rehashedPass);
+         if(hashedPass.equals(rehashedPass)){
+             status = resultSet.getString("u_status");
             type = resultSet.getString("u_type");
              Session sess = Session.getInstance();
             sess.setUid(resultSet.getInt("u_id"));
@@ -45,17 +53,19 @@ public class login extends javax.swing.JFrame {
             sess.setLname(resultSet.getString("u_lastname"));
             sess.setEmail(resultSet.getString("u_email"));
             sess.setType(resultSet.getString("u_type"));
-            sess.setStatus(resultSet.getString("u_status"));
-
-            return true;
+            sess.setStatus(resultSet.getString("u_status"));    
+            return true; 
+                }else{
+                         return false;
+                        }
             }else{
                 return false;
             }
-        }catch (SQLException ex){
+        }catch (SQLException  | NoSuchAlgorithmException  ex){
             return false;
         }
-    }
     
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

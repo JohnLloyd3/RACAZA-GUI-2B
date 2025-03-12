@@ -20,7 +20,7 @@ private String username;
 private String type;
 private String status;
 
-private Session(){
+public Session(){
  //Privatecons.prevents instace
 }
     public static synchronized Session getInstance() {

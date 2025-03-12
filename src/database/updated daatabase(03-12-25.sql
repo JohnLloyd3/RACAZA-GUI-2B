@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 26, 2025 at 03:29 PM
+-- Generation Time: Mar 12, 2025 at 08:52 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -32,7 +32,7 @@ CREATE TABLE `tbl_user` (
   `u_firstname` varchar(50) NOT NULL,
   `u_lastname` varchar(50) NOT NULL,
   `u_email` varchar(50) NOT NULL,
-  `u_username` varchar(50) NOT NULL,
+  `u_username` varchar(250) NOT NULL,
   `u_password` varchar(50) NOT NULL,
   `u_type` varchar(50) NOT NULL,
   `u_status` varchar(50) NOT NULL
@@ -43,9 +43,10 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`u_id`, `u_firstname`, `u_lastname`, `u_email`, `u_username`, `u_password`, `u_type`, `u_status`) VALUES
-(1, 'John Lloyd', 'Racaza', 'johnlloydracaza88@gmail.com', 'johnlloyd23', 'johnlloyd1', 'Admin', 'Active'),
-(2, 'Leonelen ', 'Carmen', 'leonelencarmen11@gmail.com', 'leonelen11', 'leonelen12345', 'User', 'Active'),
-(3, 'Jay Lester', 'Racaza', 'lester@gmail.com', 'lester123', '123123123', 'User', 'Pending');
+(1, 'John Lloyd', 'Racaza', 'johnlloydracaza88@gmail.com', 'johnlloyd23', 'ky88G1YlfOhTmsJp16q0JVDaz4gY0HXwvfGZBWKq4+8=', 'Admin', 'Active'),
+(2, 'Leonelen ', 'Carmen', 'leonelencarmen11@gmail.com', 'leonelen11', 'ky88G1YlfOhTmsJp16q0JVDaz4gY0HXwvfGZBWKq4+8=', 'User', 'Active'),
+(3, 'Jay Lester', 'Racaza', 'lester@gmail.com', 'lester123', 'ky88G1YlfOhTmsJp16q0JVDaz4gY0HXwvfGZBWKq4+8=', 'User', 'Active'),
+(21, 'lloyd', 'john', 'lloyd@gmail.com', 'lloyd', 'ky88G1YlfOhTmsJp16q0JVDaz4gY0HXwvfGZBWKq4+8=', 'Admin', 'Active');
 
 --
 -- Indexes for dumped tables
@@ -65,7 +66,7 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `u_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `u_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
