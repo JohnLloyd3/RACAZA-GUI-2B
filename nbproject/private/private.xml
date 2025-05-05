@@ -3,18 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/johnlloyd/OneDrive/Desktop/racazaupdated/RACAZA-GUI-2B/src/admin/usersForm.java</file>
-            <file>file:/C:/Users/johnlloyd/OneDrive/Desktop/racazaupdated/RACAZA-GUI-2B/src/config/passwordHasher.java</file>
-            <file>file:/C:/Users/johnlloyd/OneDrive/Desktop/racazaupdated/RACAZA-GUI-2B/src/database/updated%20daatabase(03-12-25.sql</file>
-            <file>file:/C:/Users/johnlloyd/OneDrive/Desktop/racazaupdated/RACAZA-GUI-2B/src/racazagui/login.java</file>
-            <file>file:/C:/Users/johnlloyd/OneDrive/Desktop/racazaupdated/RACAZA-GUI-2B/src/racazagui/register.java</file>
-            <file>file:/C:/Users/johnlloyd/OneDrive/Desktop/racazaupdated/RACAZA-GUI-2B/src/admin/admindashboard.java</file>
-            <file>file:/C:/Users/johnlloyd/OneDrive/Desktop/racazaupdated/RACAZA-GUI-2B/src/config/Session.java</file>
-            <file>file:/C:/Users/johnlloyd/OneDrive/Desktop/racazaupdated/RACAZA-GUI-2B/src/config/dbConnector.java</file>
-            <file>file:/C:/Users/johnlloyd/OneDrive/Desktop/racazaupdated/RACAZA-GUI-2B/src/user/changepass.java</file>
-            <file>file:/C:/Users/johnlloyd/OneDrive/Desktop/racazaupdated/RACAZA-GUI-2B/src/user/userDashboard.java</file>
-            <file>file:/C:/Users/johnlloyd/OneDrive/Desktop/racazaupdated/RACAZA-GUI-2B/src/user/accountDetails.java</file>
-            <file>file:/C:/Users/johnlloyd/OneDrive/Desktop/racazaupdated/RACAZA-GUI-2B/src/admin/createUserForm.java</file>
+            <file>file:/C:/Users/johnlloyd/OneDrive/Desktop/racazaupdated/racazagui%202025/src/admin/usersForm.java</file>
+            <file>file:/C:/Users/johnlloyd/OneDrive/Desktop/racazaupdated/racazagui%202025/src/config/Session.java</file>
+            <file>file:/C:/Users/johnlloyd/OneDrive/Desktop/racazaupdated/racazagui%202025/src/aboutus/aboutus.java</file>
+            <file>file:/C:/Users/johnlloyd/OneDrive/Desktop/racazaupdated/racazagui%202025/src/racazagui/login.java</file>
+            <file>file:/C:/Users/johnlloyd/OneDrive/Desktop/racazaupdated/racazagui%202025/src/racazagui/register.java</file>
+            <file>file:/C:/Users/johnlloyd/OneDrive/Desktop/racazaupdated/racazagui%202025/src/admin/createUserForm.java</file>
+            <file>file:/C:/Users/johnlloyd/OneDrive/Desktop/racazaupdated/racazagui%202025/src/user/accountDetails.java</file>
+            <file>file:/C:/Users/johnlloyd/OneDrive/Desktop/racazaupdated/racazagui%202025/src/user/changepass.java</file>
+            <file>file:/C:/Users/johnlloyd/OneDrive/Desktop/racazaupdated/racazagui%202025/src/user/userDashboard.java</file>
+            <file>file:/C:/Users/johnlloyd/OneDrive/Desktop/racazaupdated/racazagui%202025/src/admin/admindashboard.java</file>
         </group>
     </open-files>
 </project-private>

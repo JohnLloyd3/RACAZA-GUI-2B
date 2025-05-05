@@ -28,8 +28,8 @@ public class usersForm extends javax.swing.JFrame {
          
     }
      
-    Color navcolor = new Color (0,0,0);
-  Color hovercolor = new Color (51,51,255);
+    Color navcolor = new Color (123,159,207);
+  Color hovercolor = new Color (123,159,207);
 
    public void displayData(){
         try{
@@ -51,24 +51,23 @@ public class usersForm extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        navigation = new javax.swing.JPanel();
-        WELCOME3 = new javax.swing.JLabel();
-        back = new javax.swing.JButton();
-        Active = new javax.swing.JButton();
-        Pending = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         usersTable = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         acc_id = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         p_edit = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         p_add = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        acc_lname = new javax.swing.JLabel();
+        acc_fname = new javax.swing.JLabel();
+        Active = new javax.swing.JButton();
+        back = new javax.swing.JButton();
+        Pending = new javax.swing.JButton();
+        WELCOME3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -78,47 +77,8 @@ public class usersForm extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(142, 177, 217));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        navigation.setBackground(new java.awt.Color(0, 0, 0));
-        navigation.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        WELCOME3.setFont(new java.awt.Font("HP Simplified Jpan", 0, 48)); // NOI18N
-        WELCOME3.setForeground(new java.awt.Color(255, 255, 255));
-        WELCOME3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        WELCOME3.setText("USERS FORM");
-        navigation.add(WELCOME3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 440, 100));
-
-        back.setBackground(new java.awt.Color(255, 255, 255));
-        back.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        back.setText("BACK");
-        back.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backActionPerformed(evt);
-            }
-        });
-        navigation.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 70, 100, 40));
-
-        Active.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        Active.setText("Active");
-        Active.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ActiveActionPerformed(evt);
-            }
-        });
-        navigation.add(Active, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 40, 120, 50));
-
-        Pending.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        Pending.setText("Pending");
-        Pending.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PendingActionPerformed(evt);
-            }
-        });
-        navigation.add(Pending, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 40, 120, 50));
-
-        jPanel1.add(navigation, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1150, 110));
 
         usersTable.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         usersTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -131,40 +91,24 @@ public class usersForm extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(usersTable);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 130, 760, 540));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, 970, 780));
 
-        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel2.setBackground(new java.awt.Color(123, 159, 207));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user11-removebg-preview.png"))); // NOI18N
-        jPanel3.add(jLabel4);
-
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel1.setText("USER");
-        jPanel3.add(jLabel1);
-
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 200, 270));
 
         acc_id.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         acc_id.setForeground(new java.awt.Color(255, 255, 255));
         acc_id.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         acc_id.setText("ID");
-        jPanel2.add(acc_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 550, 240, -1));
-
-        jLabel3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel3.setText("USER");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jPanel2.add(acc_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 800, 260, -1));
 
         jLabel5.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Current User:");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 520, 240, -1));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 770, 260, -1));
 
-        p_edit.setBackground(new java.awt.Color(0, 0, 0));
+        p_edit.setBackground(new java.awt.Color(123, 159, 207));
         p_edit.setForeground(new java.awt.Color(255, 255, 255));
         p_edit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -179,7 +123,7 @@ public class usersForm extends javax.swing.JFrame {
         });
         p_edit.setLayout(null);
 
-        jLabel7.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("EDIT");
@@ -189,11 +133,11 @@ public class usersForm extends javax.swing.JFrame {
             }
         });
         p_edit.add(jLabel7);
-        jLabel7.setBounds(90, 20, 50, 20);
+        jLabel7.setBounds(110, 20, 50, 20);
 
-        jPanel2.add(p_edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 240, 60));
+        jPanel2.add(p_edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 260, 60));
 
-        p_add.setBackground(new java.awt.Color(0, 0, 0));
+        p_add.setBackground(new java.awt.Color(123, 159, 207));
         p_add.setForeground(new java.awt.Color(255, 255, 255));
         p_add.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -208,7 +152,7 @@ public class usersForm extends javax.swing.JFrame {
         });
         p_add.setLayout(null);
 
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("ADD");
@@ -218,13 +162,87 @@ public class usersForm extends javax.swing.JFrame {
             }
         });
         p_add.add(jLabel2);
-        jLabel2.setBounds(90, 20, 50, 20);
+        jLabel2.setBounds(110, 20, 50, 20);
 
-        jPanel2.add(p_add, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 240, 60));
+        jPanel2.add(p_add, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 260, 60));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 240, 600));
+        jPanel3.setBackground(new java.awt.Color(142, 177, 217));
+        jPanel3.setForeground(new java.awt.Color(255, 255, 255));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -7, 1050, 690));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Screenshot 2025-04-30 193832-modified.png"))); // NOI18N
+
+        acc_lname.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        acc_lname.setForeground(new java.awt.Color(255, 255, 255));
+        acc_lname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        acc_lname.setText("ADMIN");
+
+        acc_fname.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        acc_fname.setForeground(new java.awt.Color(255, 255, 255));
+        acc_fname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        acc_fname.setText("ADMIN");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(acc_lname, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
+            .addComponent(acc_fname, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addComponent(jLabel4)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap(28, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(acc_lname)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(acc_fname))
+        );
+
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 210, 190));
+
+        Active.setBackground(new java.awt.Color(123, 159, 207));
+        Active.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Active.setText("Active");
+        Active.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ActiveActionPerformed(evt);
+            }
+        });
+        jPanel2.add(Active, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 520, 170, 50));
+
+        back.setBackground(new java.awt.Color(255, 255, 255));
+        back.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        back.setText("BACK");
+        back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backActionPerformed(evt);
+            }
+        });
+        jPanel2.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 660, 130, 40));
+
+        Pending.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Pending.setText("Pending");
+        Pending.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PendingActionPerformed(evt);
+            }
+        });
+        jPanel2.add(Pending, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 590, 170, 50));
+
+        WELCOME3.setFont(new java.awt.Font("HP Simplified Jpan", 0, 24)); // NOI18N
+        WELCOME3.setForeground(new java.awt.Color(255, 255, 255));
+        WELCOME3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        WELCOME3.setText("USERS FORM");
+        jPanel2.add(WELCOME3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 70));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 840));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 1300, 840));
 
         pack();
         setLocationRelativeTo(null);
@@ -241,7 +259,7 @@ public class usersForm extends javax.swing.JFrame {
     }//GEN-LAST:event_ActiveActionPerformed
 
     private void PendingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PendingActionPerformed
-        // TODO add your handling code here:
+   
     }//GEN-LAST:event_PendingActionPerformed
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
@@ -362,11 +380,11 @@ public class usersForm extends javax.swing.JFrame {
     private javax.swing.JButton Active;
     private javax.swing.JButton Pending;
     private javax.swing.JLabel WELCOME3;
+    private javax.swing.JLabel acc_fname;
     private javax.swing.JLabel acc_id;
+    private javax.swing.JLabel acc_lname;
     private javax.swing.JButton back;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
@@ -374,7 +392,6 @@ public class usersForm extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JPanel navigation;
     private javax.swing.JPanel p_add;
     private javax.swing.JPanel p_edit;
     private javax.swing.JTable usersTable;

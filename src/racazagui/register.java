@@ -6,6 +6,7 @@
 package racazagui;
 
 
+import admin.usersForm;
 import config.dbConnector;
 import config.passwordHasher;
 import java.security.NoSuchAlgorithmException;
@@ -62,68 +63,60 @@ public class register extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        logo = new javax.swing.JLabel();
-        background = new javax.swing.JPanel();
-        rgnavigation = new javax.swing.JPanel();
-        registrationformtext = new javax.swing.JLabel();
-        attext = new javax.swing.JLabel();
-        resfntext = new javax.swing.JLabel();
-        reslntext = new javax.swing.JLabel();
-        resemailtext = new javax.swing.JLabel();
-        resusrntext = new javax.swing.JLabel();
+        background1 = new javax.swing.JPanel();
+        attext1 = new javax.swing.JLabel();
+        resfntext1 = new javax.swing.JLabel();
+        reslntext1 = new javax.swing.JLabel();
+        resemailtext1 = new javax.swing.JLabel();
+        resusrntext1 = new javax.swing.JLabel();
         fn = new javax.swing.JTextField();
         em = new javax.swing.JTextField();
         ln = new javax.swing.JTextField();
         resloginbutton = new javax.swing.JButton();
-        rescancelbutton2 = new javax.swing.JButton();
-        resps1 = new javax.swing.JLabel();
-        logo1 = new javax.swing.JLabel();
+        resps2 = new javax.swing.JLabel();
         us = new javax.swing.JTextField();
         at = new javax.swing.JComboBox<>();
         ps = new javax.swing.JPasswordField();
-
-        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.jpg"))); // NOI18N
+        lll1 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        navigation2 = new javax.swing.JPanel();
+        registrationformtext2 = new javax.swing.JLabel();
+        WELCOME4 = new javax.swing.JLabel();
+        recancelbutton = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        background.setBackground(new java.awt.Color(255, 255, 255));
-        background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        background1.setBackground(new java.awt.Color(142, 177, 217));
+        background1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        rgnavigation.setBackground(new java.awt.Color(0, 0, 0));
-        rgnavigation.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        attext1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        attext1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        attext1.setText("Account Type:");
+        background1.add(attext1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 460, 330, 40));
 
-        registrationformtext.setFont(new java.awt.Font("HP Simplified Jpan", 0, 48)); // NOI18N
-        registrationformtext.setForeground(new java.awt.Color(255, 255, 255));
-        registrationformtext.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        registrationformtext.setText("REGISTRATION FORM");
-        rgnavigation.add(registrationformtext, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 60));
+        resfntext1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        resfntext1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        resfntext1.setText("First Name:");
+        background1.add(resfntext1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, 330, 40));
 
-        background.add(rgnavigation, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 80));
+        reslntext1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        reslntext1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        reslntext1.setText("Last Name:");
+        background1.add(reslntext1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 160, 330, 40));
 
-        attext.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        attext.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        attext.setText("Account Type:");
-        background.add(attext, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 510, 450, 40));
+        resemailtext1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        resemailtext1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        resemailtext1.setText("Email:");
+        background1.add(resemailtext1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 330, 40));
 
-        resfntext.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        resfntext.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        resfntext.setText("First Name:");
-        background.add(resfntext, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 130, 450, 40));
-
-        reslntext.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        reslntext.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        reslntext.setText("Last Name:");
-        background.add(reslntext, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 210, 450, 40));
-
-        resemailtext.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        resemailtext.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        resemailtext.setText("Email:");
-        background.add(resemailtext, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 450, 40));
-
-        resusrntext.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        resusrntext.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        resusrntext.setText("Username:");
-        background.add(resusrntext, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 360, 450, 40));
+        resusrntext1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        resusrntext1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        resusrntext1.setText("Username:");
+        background1.add(resusrntext1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 310, 330, 40));
 
         fn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         fn.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -132,7 +125,7 @@ public class register extends javax.swing.JFrame {
                 fnActionPerformed(evt);
             }
         });
-        background.add(fn, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 170, 450, 40));
+        background1.add(fn, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, 330, 40));
 
         em.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         em.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -141,7 +134,7 @@ public class register extends javax.swing.JFrame {
                 emActionPerformed(evt);
             }
         });
-        background.add(em, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 320, 450, 40));
+        background1.add(em, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 270, 330, 40));
 
         ln.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         ln.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -150,33 +143,21 @@ public class register extends javax.swing.JFrame {
                 lnActionPerformed(evt);
             }
         });
-        background.add(ln, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 250, 450, 40));
+        background1.add(ln, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 200, 330, 40));
 
-        resloginbutton.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        resloginbutton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         resloginbutton.setText("Register");
         resloginbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 resloginbuttonActionPerformed(evt);
             }
         });
-        background.add(resloginbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 640, 160, 60));
+        background1.add(resloginbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 660, 130, 50));
 
-        rescancelbutton2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        rescancelbutton2.setText("Cancel");
-        rescancelbutton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rescancelbutton2ActionPerformed(evt);
-            }
-        });
-        background.add(rescancelbutton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 640, 160, 60));
-
-        resps1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        resps1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        resps1.setText("Password:");
-        background.add(resps1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 430, 450, 40));
-
-        logo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.jpg"))); // NOI18N
-        background.add(logo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-90, 110, 620, 620));
+        resps2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        resps2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        resps2.setText("Password:");
+        background1.add(resps2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 380, 330, 40));
 
         us.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         us.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -185,16 +166,16 @@ public class register extends javax.swing.JFrame {
                 usActionPerformed(evt);
             }
         });
-        background.add(us, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 390, 450, 40));
+        background1.add(us, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 340, 330, 40));
 
-        at.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        at.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         at.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User", "Admin" }));
         at.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 atActionPerformed(evt);
             }
         });
-        background.add(at, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 550, 450, 50));
+        background1.add(at, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 500, 330, 50));
 
         ps.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         ps.addActionListener(new java.awt.event.ActionListener() {
@@ -202,21 +183,74 @@ public class register extends javax.swing.JFrame {
                 psActionPerformed(evt);
             }
         });
-        background.add(ps, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 470, 450, 40));
+        background1.add(ps, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 420, 330, 40));
+
+        lll1.setBackground(new java.awt.Color(123, 159, 207));
+        lll1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/supp logo (1)-modified.png"))); // NOI18N
+        lll1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Love . Care . Protect");
+        lll1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 270, -1));
+
+        jLabel8.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("Support Us!");
+        lll1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 500, 270, -1));
+
+        jLabel9.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setText("About Us!");
+        lll1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 270, -1));
+
+        jLabel10.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setText("Join Us!");
+        lll1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 270, -1));
+
+        navigation2.setBackground(new java.awt.Color(123, 159, 207));
+        navigation2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        registrationformtext2.setFont(new java.awt.Font("HP Simplified Jpan", 0, 48)); // NOI18N
+        registrationformtext2.setForeground(new java.awt.Color(255, 255, 255));
+        registrationformtext2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        registrationformtext2.setText("REGISTRATION FORM");
+        navigation2.add(registrationformtext2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-200, 20, 1000, 60));
+
+        lll1.add(navigation2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -90, 1000, 140));
+
+        background1.add(lll1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 740));
+
+        WELCOME4.setFont(new java.awt.Font("HP Simplified Jpan", 0, 36)); // NOI18N
+        WELCOME4.setForeground(new java.awt.Color(255, 255, 255));
+        WELCOME4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        WELCOME4.setText("Register Form");
+        background1.add(WELCOME4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, 620, 80));
+
+        recancelbutton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        recancelbutton.setText("Cancel");
+        recancelbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                recancelbuttonActionPerformed(evt);
+            }
+        });
+        background1.add(recancelbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 660, 130, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1010, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, 1010, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(background1, javax.swing.GroupLayout.PREFERRED_SIZE, 877, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 733, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, 733, Short.MAX_VALUE))
+            .addComponent(background1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -300,6 +334,12 @@ this.dispose();
      String password = ps.getText();  // 
     }//GEN-LAST:event_psActionPerformed
 
+    private void recancelbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recancelbuttonActionPerformed
+       login lg = new login();
+           lg.setVisible(true);
+           this.dispose(); 
+    }//GEN-LAST:event_recancelbuttonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -336,24 +376,29 @@ this.dispose();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel WELCOME4;
     private javax.swing.JComboBox<String> at;
-    private javax.swing.JLabel attext;
-    private javax.swing.JPanel background;
+    private javax.swing.JLabel attext1;
+    private javax.swing.JPanel background1;
     private javax.swing.JTextField em;
     private javax.swing.JTextField fn;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel lll1;
     private javax.swing.JTextField ln;
-    private javax.swing.JLabel logo;
-    private javax.swing.JLabel logo1;
+    private javax.swing.JPanel navigation2;
     private javax.swing.JPasswordField ps;
-    private javax.swing.JLabel registrationformtext;
-    private javax.swing.JButton rescancelbutton2;
-    private javax.swing.JLabel resemailtext;
-    private javax.swing.JLabel resfntext;
-    private javax.swing.JLabel reslntext;
+    private javax.swing.JToggleButton recancelbutton;
+    private javax.swing.JLabel registrationformtext2;
+    private javax.swing.JLabel resemailtext1;
+    private javax.swing.JLabel resfntext1;
+    private javax.swing.JLabel reslntext1;
     private javax.swing.JButton resloginbutton;
-    private javax.swing.JLabel resps1;
-    private javax.swing.JLabel resusrntext;
-    private javax.swing.JPanel rgnavigation;
+    private javax.swing.JLabel resps2;
+    private javax.swing.JLabel resusrntext1;
     private javax.swing.JTextField us;
     // End of variables declaration//GEN-END:variables
 }

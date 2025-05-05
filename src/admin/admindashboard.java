@@ -33,16 +33,15 @@ public class admindashboard extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         navigation = new javax.swing.JPanel();
-        aa = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        lgo = new javax.swing.JLabel();
+        WELCOME4 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
         acc_lname = new javax.swing.JLabel();
         acc_fname = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         userstable = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        navigation1 = new javax.swing.JPanel();
-        WELCOME4 = new javax.swing.JLabel();
-        lgo = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -52,64 +51,14 @@ public class admindashboard extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(142, 177, 217));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        navigation.setBackground(new java.awt.Color(0, 0, 0));
+        navigation.setBackground(new java.awt.Color(123, 159, 207));
         navigation.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        aa.setBackground(new java.awt.Color(0, 0, 0));
-
-        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add-removebg-preview (1).png"))); // NOI18N
-        aa.add(jLabel1);
-
-        acc_lname.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        acc_lname.setForeground(new java.awt.Color(255, 255, 255));
-        acc_lname.setText("ADMIN");
-        aa.add(acc_lname);
-
-        acc_fname.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        acc_fname.setForeground(new java.awt.Color(255, 255, 255));
-        acc_fname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        acc_fname.setText("ADMIN");
-        aa.add(acc_fname);
-
-        navigation.add(aa, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 180, 270));
-
-        jPanel1.add(navigation, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 260, 630));
-
-        userstable.setBackground(new java.awt.Color(255, 255, 255));
-        userstable.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                userstableMouseClicked(evt);
-            }
-        });
-        userstable.setLayout(null);
-
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("USERS");
-        userstable.add(jLabel2);
-        jLabel2.setBounds(60, 140, 80, 50);
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user11-removebg-preview.png"))); // NOI18N
-        userstable.add(jLabel4);
-        jLabel4.setBounds(0, 30, 190, 110);
-
-        jPanel1.add(userstable, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 100, 190, 180));
-
-        navigation1.setBackground(new java.awt.Color(0, 0, 0));
-        navigation1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        WELCOME4.setFont(new java.awt.Font("HP Simplified Jpan", 0, 36)); // NOI18N
-        WELCOME4.setForeground(new java.awt.Color(255, 255, 255));
-        WELCOME4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        WELCOME4.setText("ADMIN DASHBOARD");
-        navigation1.add(WELCOME4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 330, 70));
-
         lgo.setBackground(new java.awt.Color(255, 255, 255));
-        lgo.setFont(new java.awt.Font("HP Simplified Jpan", 0, 24)); // NOI18N
+        lgo.setFont(new java.awt.Font("HP Simplified Jpan", 0, 18)); // NOI18N
         lgo.setForeground(new java.awt.Color(255, 255, 255));
         lgo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lgo.setText("LOGOUT");
@@ -118,11 +67,79 @@ public class admindashboard extends javax.swing.JFrame {
                 lgoMouseClicked(evt);
             }
         });
-        navigation1.add(lgo, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 20, 120, 70));
+        navigation.add(lgo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 680, 260, 80));
 
-        jPanel1.add(navigation1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 1150, 90));
+        WELCOME4.setFont(new java.awt.Font("HP Simplified Jpan", 0, 24)); // NOI18N
+        WELCOME4.setForeground(new java.awt.Color(255, 255, 255));
+        WELCOME4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        WELCOME4.setText("ADMIN DASHBOARD");
+        navigation.add(WELCOME4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 260, 60));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 1030, 690));
+        jPanel3.setBackground(new java.awt.Color(142, 177, 217));
+        jPanel3.setForeground(new java.awt.Color(255, 255, 255));
+
+        acc_lname.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        acc_lname.setForeground(new java.awt.Color(255, 255, 255));
+        acc_lname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        acc_lname.setText("ADMIN");
+
+        acc_fname.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        acc_fname.setForeground(new java.awt.Color(255, 255, 255));
+        acc_fname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        acc_fname.setText("ADMIN");
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Screenshot 2025-04-30 193832-modified.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(acc_lname, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(acc_fname, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(60, Short.MAX_VALUE)
+                .addComponent(jLabel6)
+                .addGap(52, 52, 52))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap(23, Short.MAX_VALUE)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(acc_lname)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(acc_fname)
+                .addGap(5, 5, 5))
+        );
+
+        navigation.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 210, 190));
+
+        jPanel1.add(navigation, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 760));
+
+        userstable.setBackground(new java.awt.Color(123, 159, 207));
+        userstable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                userstableMouseClicked(evt);
+            }
+        });
+        userstable.setLayout(null);
+
+        jLabel2.setBackground(new java.awt.Color(123, 159, 207));
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("USERS");
+        userstable.add(jLabel2);
+        jLabel2.setBounds(30, 140, 80, 30);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Screenshot 2025-04-30 193832-modified.png"))); // NOI18N
+        userstable.add(jLabel5);
+        jLabel5.setBounds(20, 20, 98, 98);
+
+        jPanel1.add(userstable, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 140, 180));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1130, 760));
 
         pack();
         setLocationRelativeTo(null);
@@ -189,16 +206,15 @@ public class admindashboard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel WELCOME4;
-    private javax.swing.JPanel aa;
     private javax.swing.JLabel acc_fname;
     private javax.swing.JLabel acc_lname;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel lgo;
     private javax.swing.JPanel navigation;
-    private javax.swing.JPanel navigation1;
     private javax.swing.JPanel userstable;
     // End of variables declaration//GEN-END:variables
 }

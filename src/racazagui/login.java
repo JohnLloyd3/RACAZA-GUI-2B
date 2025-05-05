@@ -1,4 +1,4 @@
-/*
+    /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -18,7 +18,7 @@ import user.userDashboard;
 /**
  *
  * @author johnlloyd
- */
+ */ 
 public class login extends javax.swing.JFrame {
 
     
@@ -26,6 +26,7 @@ public class login extends javax.swing.JFrame {
         initComponents();
         this.setResizable(false);
     }
+    
     
     static String status;
     static String type;
@@ -78,41 +79,63 @@ public class login extends javax.swing.JFrame {
         jCheckBox1 = new javax.swing.JCheckBox();
         background = new javax.swing.JPanel();
         navigation = new javax.swing.JPanel();
-        WELCOME3 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         pstext = new javax.swing.JLabel();
         ustext = new javax.swing.JLabel();
         loginbutton = new javax.swing.JButton();
         clickheretoregister = new javax.swing.JLabel();
-        logo = new javax.swing.JLabel();
         us = new javax.swing.JTextField();
         ps = new javax.swing.JPasswordField();
+        WELCOME3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         jCheckBox1.setText("jCheckBox1");
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        background.setBackground(new java.awt.Color(255, 255, 255));
+        background.setBackground(new java.awt.Color(142, 177, 217));
         background.setForeground(new java.awt.Color(255, 255, 255));
         background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        navigation.setBackground(new java.awt.Color(0, 0, 0));
+        navigation.setBackground(new java.awt.Color(123, 159, 207));
         navigation.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        WELCOME3.setFont(new java.awt.Font("HP Simplified Jpan", 0, 48)); // NOI18N
-        WELCOME3.setForeground(new java.awt.Color(255, 255, 255));
-        WELCOME3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        WELCOME3.setText("WELCOME TO CUDDLE BUDDIES");
-        navigation.add(WELCOME3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 120));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/supp logo (1)-modified.png"))); // NOI18N
+        navigation.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
 
-        background.add(navigation, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1120, 120));
+        jLabel1.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Love . Care . Protect");
+        navigation.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 270, -1));
 
-        pstext.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        pstext.setText("PASSWORD:");
-        background.add(pstext, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 370, 120, 50));
+        jLabel4.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Support Us!");
+        navigation.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 500, 270, -1));
 
-        ustext.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        ustext.setText("USERNAME:");
-        background.add(ustext, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 270, 160, 50));
+        jLabel5.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("About Us!");
+        navigation.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 270, -1));
+
+        jLabel6.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("Join Us!");
+        navigation.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 270, -1));
+
+        background.add(navigation, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 590));
+
+        pstext.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        pstext.setText("Password:");
+        background.add(pstext, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 410, 90, 40));
+
+        ustext.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        ustext.setText("Username:");
+        background.add(ustext, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 340, 90, 40));
 
         loginbutton.setBackground(new java.awt.Color(204, 204, 255));
         loginbutton.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -122,7 +145,7 @@ public class login extends javax.swing.JFrame {
                 loginbuttonActionPerformed(evt);
             }
         });
-        background.add(loginbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 500, 230, 50));
+        background.add(loginbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 470, 190, 40));
 
         clickheretoregister.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         clickheretoregister.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -132,10 +155,7 @@ public class login extends javax.swing.JFrame {
                 clickheretoregisterMouseClicked(evt);
             }
         });
-        background.add(clickheretoregister, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 570, 300, 50));
-
-        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.jpg"))); // NOI18N
-        background.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-100, 120, 590, 580));
+        background.add(clickheretoregister, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 510, 300, 50));
 
         us.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         us.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -144,12 +164,21 @@ public class login extends javax.swing.JFrame {
                 usActionPerformed(evt);
             }
         });
-        background.add(us, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 320, 450, 50));
+        background.add(us, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 340, 330, 40));
 
         ps.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        background.add(ps, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 420, 450, 50));
+        background.add(ps, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 410, 330, 40));
 
-        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -10, 1020, 710));
+        WELCOME3.setFont(new java.awt.Font("HP Simplified Jpan", 0, 36)); // NOI18N
+        WELCOME3.setForeground(new java.awt.Color(255, 255, 255));
+        WELCOME3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        WELCOME3.setText("CUDDLE BUDDIES");
+        background.add(WELCOME3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 590, 80));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo (3)-modified.png"))); // NOI18N
+        background.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 90, -1, -1));
+
+        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 590));
 
         pack();
         setLocationRelativeTo(null);
@@ -244,8 +273,13 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JPanel background;
     private javax.swing.JLabel clickheretoregister;
     private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JButton loginbutton;
-    private javax.swing.JLabel logo;
     private javax.swing.JPanel navigation;
     private javax.swing.JPasswordField ps;
     private javax.swing.JLabel pstext;

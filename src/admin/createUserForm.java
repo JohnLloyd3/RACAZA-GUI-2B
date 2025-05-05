@@ -51,7 +51,7 @@ public class createUserForm extends javax.swing.JFrame {
                System.out.println(""+ex);
                return false;
        }
-   
+       
        }
 
         public boolean updateCheck(){
@@ -79,75 +79,91 @@ public class createUserForm extends javax.swing.JFrame {
                System.out.println(""+ex);
                return false;
        }
-   
+        
        }
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        rgnavigation = new javax.swing.JPanel();
-        registrationformtext = new javax.swing.JLabel();
-        attext = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        lll1 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        navigation2 = new javax.swing.JPanel();
+        registrationformtext2 = new javax.swing.JLabel();
         resfntext = new javax.swing.JLabel();
+        uid = new javax.swing.JTextField();
+        resfntext1 = new javax.swing.JLabel();
+        fn = new javax.swing.JTextField();
         reslntext = new javax.swing.JLabel();
+        ln = new javax.swing.JTextField();
+        em = new javax.swing.JTextField();
+        resps1 = new javax.swing.JLabel();
         resemailtext = new javax.swing.JLabel();
         resusrntext = new javax.swing.JLabel();
-        uid = new javax.swing.JTextField();
-        em = new javax.swing.JTextField();
-        ln = new javax.swing.JTextField();
-        add = new javax.swing.JButton();
-        resps1 = new javax.swing.JLabel();
-        logo1 = new javax.swing.JLabel();
         us = new javax.swing.JTextField();
-        uss = new javax.swing.JComboBox<>();
         ps = new javax.swing.JPasswordField();
-        ut = new javax.swing.JComboBox<>();
         attext1 = new javax.swing.JLabel();
-        fn = new javax.swing.JTextField();
-        resfntext1 = new javax.swing.JLabel();
-        clear = new javax.swing.JButton();
+        ut = new javax.swing.JComboBox<>();
+        attext = new javax.swing.JLabel();
+        uss = new javax.swing.JComboBox<>();
+        add = new javax.swing.JButton();
         update = new javax.swing.JButton();
         delete = new javax.swing.JButton();
         refresh = new javax.swing.JButton();
         cancel = new javax.swing.JButton();
+        clear = new javax.swing.JButton();
+        WELCOME4 = new javax.swing.JLabel();
+        resuidtext = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(123, 159, 207));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        rgnavigation.setBackground(new java.awt.Color(0, 0, 0));
-        rgnavigation.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.setBackground(new java.awt.Color(142, 177, 217));
 
-        registrationformtext.setFont(new java.awt.Font("HP Simplified Jpan", 0, 48)); // NOI18N
-        registrationformtext.setForeground(new java.awt.Color(255, 255, 255));
-        registrationformtext.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        registrationformtext.setText("REGISTRATION FORM");
-        rgnavigation.add(registrationformtext, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 60));
+        lll1.setBackground(new java.awt.Color(123, 159, 207));
+        lll1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        getContentPane().add(rgnavigation, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 70));
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/supp logo (1)-modified.png"))); // NOI18N
+        lll1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
 
-        attext.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        attext.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        attext.setText("User Status:");
-        getContentPane().add(attext, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 540, 450, 30));
+        jLabel2.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Love . Care . Protect");
+        lll1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 270, -1));
 
-        resfntext.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("Support Us!");
+        lll1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 560, 270, -1));
+
+        jLabel9.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setText("About Us!");
+        lll1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 460, 270, -1));
+
+        jLabel10.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setText("Join Us!");
+        lll1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 510, 270, -1));
+
+        navigation2.setBackground(new java.awt.Color(123, 159, 207));
+        navigation2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        registrationformtext2.setFont(new java.awt.Font("HP Simplified Jpan", 0, 48)); // NOI18N
+        registrationformtext2.setForeground(new java.awt.Color(255, 255, 255));
+        registrationformtext2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        registrationformtext2.setText("REGISTRATION FORM");
+        navigation2.add(registrationformtext2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-200, 20, 1000, 60));
+
+        lll1.add(navigation2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -90, 1000, 140));
+
+        resfntext.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         resfntext.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         resfntext.setText("User ID:");
-        getContentPane().add(resfntext, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 100, 450, 30));
-
-        reslntext.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        reslntext.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        reslntext.setText("Last Name:");
-        getContentPane().add(reslntext, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 230, 450, 20));
-
-        resemailtext.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        resemailtext.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        resemailtext.setText("Email:");
-        getContentPane().add(resemailtext, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 450, 20));
-
-        resusrntext.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        resusrntext.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        resusrntext.setText("Username:");
-        getContentPane().add(resusrntext, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 348, 450, -1));
 
         uid.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         uid.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -157,82 +173,10 @@ public class createUserForm extends javax.swing.JFrame {
                 uidActionPerformed(evt);
             }
         });
-        getContentPane().add(uid, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 130, 450, 40));
 
-        em.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        em.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        em.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emActionPerformed(evt);
-            }
-        });
-        getContentPane().add(em, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 310, 450, 40));
-
-        ln.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        ln.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ln.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lnActionPerformed(evt);
-            }
-        });
-        getContentPane().add(ln, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 250, 450, 40));
-
-        add.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        add.setText("ADD");
-        add.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addActionPerformed(evt);
-            }
-        });
-        getContentPane().add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 650, 120, 50));
-
-        resps1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        resps1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        resps1.setText("Password:");
-        getContentPane().add(resps1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 410, 450, 20));
-
-        logo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.jpg"))); // NOI18N
-        getContentPane().add(logo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-90, 110, 620, 690));
-
-        us.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        us.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        us.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                usActionPerformed(evt);
-            }
-        });
-        getContentPane().add(us, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 370, 450, 40));
-
-        uss.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        uss.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Active", "Pending" }));
-        uss.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ussActionPerformed(evt);
-            }
-        });
-        getContentPane().add(uss, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 570, 450, 50));
-
-        ps.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ps.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                psActionPerformed(evt);
-            }
-        });
-        getContentPane().add(ps, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 430, 450, 40));
-
-        ut.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        ut.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User", "Admin" }));
-        ut.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                utActionPerformed(evt);
-            }
-        });
-        getContentPane().add(ut, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 490, 450, 50));
-
-        attext1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        attext1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        attext1.setText("Account Type:");
-        getContentPane().add(attext1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 470, 450, 20));
+        resfntext1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        resfntext1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        resfntext1.setText("First Name:");
 
         fn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         fn.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -241,23 +185,87 @@ public class createUserForm extends javax.swing.JFrame {
                 fnActionPerformed(evt);
             }
         });
-        getContentPane().add(fn, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 190, 450, 40));
 
-        resfntext1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        resfntext1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        resfntext1.setText("First Name:");
-        getContentPane().add(resfntext1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 170, 450, 20));
+        reslntext.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        reslntext.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        reslntext.setText("Last Name:");
 
-        clear.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        clear.setText("CLEAR");
-        clear.addActionListener(new java.awt.event.ActionListener() {
+        ln.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        ln.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        ln.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clearActionPerformed(evt);
+                lnActionPerformed(evt);
             }
         });
-        getContentPane().add(clear, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 710, 120, 50));
 
-        update.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        em.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        em.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        em.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emActionPerformed(evt);
+            }
+        });
+
+        resps1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        resps1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        resps1.setText("Password:");
+
+        resemailtext.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        resemailtext.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        resemailtext.setText("Email:");
+
+        resusrntext.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        resusrntext.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        resusrntext.setText("Username:");
+
+        us.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        us.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        us.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usActionPerformed(evt);
+            }
+        });
+
+        ps.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        ps.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                psActionPerformed(evt);
+            }
+        });
+
+        attext1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        attext1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        attext1.setText("Account Type:");
+
+        ut.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        ut.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User", "Admin" }));
+        ut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                utActionPerformed(evt);
+            }
+        });
+
+        attext.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        attext.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        attext.setText("User Status:");
+
+        uss.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        uss.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Active", "Pending" }));
+        uss.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ussActionPerformed(evt);
+            }
+        });
+
+        add.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        add.setText("ADD");
+        add.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addActionPerformed(evt);
+            }
+        });
+
+        update.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         update.setText("UPDATE");
         update.setEnabled(false);
         update.addActionListener(new java.awt.event.ActionListener() {
@@ -265,51 +273,219 @@ public class createUserForm extends javax.swing.JFrame {
                 updateActionPerformed(evt);
             }
         });
-        getContentPane().add(update, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 650, 120, 50));
 
-        delete.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        delete.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         delete.setText("DELETE");
         delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deleteActionPerformed(evt);
             }
         });
-        getContentPane().add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 650, 120, 50));
 
-        refresh.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        refresh.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         refresh.setText("REFRESH");
         refresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 refreshActionPerformed(evt);
             }
         });
-        getContentPane().add(refresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 710, 120, 50));
 
-        cancel.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        cancel.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         cancel.setText("CANCEL");
         cancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelActionPerformed(evt);
             }
         });
-        getContentPane().add(cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 710, 120, 50));
+
+        clear.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        clear.setText("CLEAR");
+        clear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearActionPerformed(evt);
+            }
+        });
+
+        WELCOME4.setFont(new java.awt.Font("HP Simplified Jpan", 0, 36)); // NOI18N
+        WELCOME4.setForeground(new java.awt.Color(255, 255, 255));
+        WELCOME4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        WELCOME4.setText("Create User ");
+
+        resuidtext.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        resuidtext.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        resuidtext.setText("User ID:");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(lll1, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(49, 49, 49)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(uid, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(resfntext1, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(fn, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(reslntext, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ln, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(resemailtext, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(em, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(resusrntext, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(us, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(resps1, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ps, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(attext1, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ut, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(attext, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(uss, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(add, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(20, 20, 20)
+                                .addComponent(update, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(20, 20, 20)
+                                .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(clear, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(20, 20, 20)
+                                .addComponent(cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(20, 20, 20)
+                                .addComponent(refresh, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(resuidtext, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(222, 222, 222)
+                        .addComponent(resfntext, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(WELCOME4, javax.swing.GroupLayout.PREFERRED_SIZE, 475, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(lll1, javax.swing.GroupLayout.PREFERRED_SIZE, 740, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(WELCOME4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(18, 18, Short.MAX_VALUE)
+                        .addComponent(resfntext, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(643, 643, 643))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(resuidtext, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(uid, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(resfntext1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(fn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(reslntext, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(ln, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(resemailtext, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(em, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(resusrntext)
+                        .addGap(3, 3, 3)
+                        .addComponent(us, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(resps1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(ps, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(attext1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(ut, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(attext, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(uss, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(add, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(update, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(20, 20, 20)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(clear, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(refresh, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 740));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void uidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uidActionPerformed
-    
+    private void cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelActionPerformed
+        usersForm usf =new usersForm();
+        usf.setVisible(true);
+        this.dispose();
 
-    }//GEN-LAST:event_uidActionPerformed
+    }//GEN-LAST:event_cancelActionPerformed
 
-    private void emActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emActionPerformed
-       
-    }//GEN-LAST:event_emActionPerformed
+    private void refreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_refreshActionPerformed
 
-    private void lnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lnActionPerformed
-    
-    }//GEN-LAST:event_lnActionPerformed
+    private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_deleteActionPerformed
+
+    private void updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateActionPerformed
+
+        if(fn.getText().isEmpty()||ln.getText().isEmpty()
+            ||em.getText().isEmpty()||us.getText().isEmpty()
+            ||ps.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "All fields are required!");
+        }else if (ps.getText().length() < 8) {
+            JOptionPane.showMessageDialog(null, "Password must be at least 8 characters long");
+            ps.setText("");
+        }else if(updateCheck()){
+            System.out.println("Duplicate Exist");
+        }else{
+            dbConnector dbc = new dbConnector();
+            dbc.updateData("UPDATE tbl_user SET u_firstname = '"+fn.getText()+"',u_lastname = '"
+                +ln.getText()+"',u_email='"+em.getText()+"'"
+                + ", u_username ='"+us.getText()+"',u_password = '"+ps.getText()+"'"
+                + ",u_type = '"+ut.getSelectedItem()+"',u_status = '"+uss.getSelectedItem()+"'WHERE u_id = '"+uid.getText()+"' ");
+            usersForm uf = new  usersForm();
+            uf.setVisible(true);
+            this.dispose();
+        }
+    }//GEN-LAST:event_updateActionPerformed
+
+    private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_clearActionPerformed
+
+    private void fnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fnActionPerformed
+
+    private void utActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_utActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_utActionPerformed
+
+    private void psActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_psActionPerformed
+
+    }//GEN-LAST:event_psActionPerformed
+
+    private void ussActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ussActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ussActionPerformed
+
+    private void usActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usActionPerformed
+
+    }//GEN-LAST:event_usActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
 
@@ -337,78 +513,23 @@ public class createUserForm extends javax.swing.JFrame {
             this.dispose();
         }else {
             JOptionPane.showMessageDialog(null, "Connection Error!");
-        }
+            }
     }//GEN-LAST:event_addActionPerformed
     }
-    private void usActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usActionPerformed
-       
+    private void lnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lnActionPerformed
 
-    }//GEN-LAST:event_usActionPerformed
+    }//GEN-LAST:event_lnActionPerformed
 
-    private void ussActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ussActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ussActionPerformed
+    private void emActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emActionPerformed
 
-    private void psActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_psActionPerformed
-      
-        
-    }//GEN-LAST:event_psActionPerformed
+    }//GEN-LAST:event_emActionPerformed
 
-    private void utActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_utActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_utActionPerformed
+    private void uidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uidActionPerformed
 
-    private void fnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fnActionPerformed
+    }//GEN-LAST:event_uidActionPerformed
+    
+    
 
-    private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_clearActionPerformed
-
-    private void updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateActionPerformed
-
-        if(fn.getText().isEmpty()||ln.getText().isEmpty()
-                ||em.getText().isEmpty()||us.getText().isEmpty()
-                ||ps.getText().isEmpty()){
-            JOptionPane.showMessageDialog(null, "All fields are required!");
-        }else if (ps.getText().length() < 8) {
-        JOptionPane.showMessageDialog(null, "Password must be at least 8 characters long");
-        ps.setText("");
-        }else if(updateCheck()){
-            System.out.println("Duplicate Exist");     
-        }else{ 
-         dbConnector dbc = new dbConnector();
-         dbc.updateData("UPDATE tbl_user SET u_firstname = '"+fn.getText()+"',u_lastname = '"
-             +ln.getText()+"',u_email='"+em.getText()+"'"
-             + ", u_username ='"+us.getText()+"',u_password = '"+ps.getText()+"'"
-             + ",u_type = '"+ut.getSelectedItem()+"',u_status = '"+uss.getSelectedItem()+"'WHERE u_id = '"+uid.getText()+"' ");    
-         usersForm uf = new  usersForm();
-         uf.setVisible(true);
-         this.dispose();
-        }
-    }//GEN-LAST:event_updateActionPerformed
-
-    private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_deleteActionPerformed
-
-    private void refreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_refreshActionPerformed
-
-    private void cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelActionPerformed
-  usersForm usf =new usersForm();
-  usf.setVisible(true);
-      this.dispose();
-      
-      
-      
-    }//GEN-LAST:event_cancelActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -441,27 +562,36 @@ public class createUserForm extends javax.swing.JFrame {
         });
     }
 
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel WELCOME4;
     public javax.swing.JButton add;
     private javax.swing.JLabel attext;
     private javax.swing.JLabel attext1;
-    public javax.swing.JButton cancel;
-    public javax.swing.JButton clear;
-    public javax.swing.JButton delete;
+    private javax.swing.JButton cancel;
+    private javax.swing.JButton clear;
+    private javax.swing.JButton delete;
     public javax.swing.JTextField em;
     public javax.swing.JTextField fn;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel lll1;
     public javax.swing.JTextField ln;
-    private javax.swing.JLabel logo1;
+    private javax.swing.JPanel navigation2;
     public javax.swing.JPasswordField ps;
-    public javax.swing.JButton refresh;
-    private javax.swing.JLabel registrationformtext;
+    private javax.swing.JButton refresh;
+    private javax.swing.JLabel registrationformtext2;
     private javax.swing.JLabel resemailtext;
     private javax.swing.JLabel resfntext;
     private javax.swing.JLabel resfntext1;
     private javax.swing.JLabel reslntext;
     private javax.swing.JLabel resps1;
+    private javax.swing.JLabel resuidtext;
     private javax.swing.JLabel resusrntext;
-    private javax.swing.JPanel rgnavigation;
     public javax.swing.JTextField uid;
     public javax.swing.JButton update;
     public javax.swing.JTextField us;

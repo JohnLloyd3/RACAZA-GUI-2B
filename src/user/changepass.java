@@ -40,24 +40,22 @@ public class changepass extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        navigation = new javax.swing.JPanel();
-        iddisplay = new javax.swing.JLabel();
-        WELCOME4 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         acc_fname = new javax.swing.JLabel();
         acc_lname = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         resfntext = new javax.swing.JLabel();
         oldpass = new javax.swing.JTextField();
         reslntext = new javax.swing.JLabel();
         newpass = new javax.swing.JTextField();
         resemailtext = new javax.swing.JLabel();
         conpass = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
         back = new javax.swing.JButton();
         save = new javax.swing.JButton();
+        iddisplay = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 102));
@@ -68,66 +66,12 @@ public class changepass extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(142, 177, 217));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        navigation.setBackground(new java.awt.Color(0, 0, 0));
-        navigation.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel2.setBackground(new java.awt.Color(123, 159, 207));
 
-        iddisplay.setFont(new java.awt.Font("HP Simplified Jpan", 0, 36)); // NOI18N
-        iddisplay.setForeground(new java.awt.Color(255, 255, 255));
-        iddisplay.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        iddisplay.setText("(UID)");
-        navigation.add(iddisplay, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 0, 480, 70));
-
-        WELCOME4.setFont(new java.awt.Font("HP Simplified Jpan", 0, 36)); // NOI18N
-        WELCOME4.setForeground(new java.awt.Color(255, 255, 255));
-        WELCOME4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        WELCOME4.setText("CHANGE PASSWORD");
-        navigation.add(WELCOME4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 370, 70));
-
-        jPanel1.add(navigation, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1140, 70));
-
-        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
-
-        jPanel3.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel3.setForeground(new java.awt.Color(255, 255, 255));
-
-        acc_fname.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        acc_fname.setForeground(new java.awt.Color(255, 255, 255));
-        acc_fname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        acc_fname.setText("User");
-
-        acc_lname.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        acc_lname.setForeground(new java.awt.Color(255, 255, 255));
-        acc_lname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        acc_lname.setText("User");
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icon_user-removebg-preview (1).png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(acc_lname, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(acc_fname, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 24, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(acc_fname, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(acc_lname)
-                .addGap(36, 36, 36))
-        );
-
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("LOGOUT");
@@ -137,31 +81,70 @@ public class changepass extends javax.swing.JFrame {
             }
         });
 
+        jPanel3.setBackground(new java.awt.Color(142, 177, 217));
+        jPanel3.setForeground(new java.awt.Color(255, 255, 255));
+
+        acc_fname.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        acc_fname.setForeground(new java.awt.Color(255, 255, 255));
+        acc_fname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        acc_fname.setText("User");
+
+        acc_lname.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        acc_lname.setForeground(new java.awt.Color(255, 255, 255));
+        acc_lname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        acc_lname.setText("User");
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Screenshot 2025-04-30 193832-modified.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(acc_fname, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(acc_lname, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addComponent(jLabel5)
+                .addContainerGap(48, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addComponent(acc_fname, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(acc_lname)
+                .addGap(5, 5, 5))
+        );
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(36, 36, 36)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(125, 125, 125)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(164, Short.MAX_VALUE))
+                .addGap(41, 41, 41)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 303, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 280, 650));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 280, 600));
 
-        resfntext.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        resfntext.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        resfntext.setForeground(new java.awt.Color(255, 255, 255));
         resfntext.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         resfntext.setText("Type Old Password:");
-        jPanel1.add(resfntext, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, 250, 40));
+        jPanel1.add(resfntext, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 220, 210, 40));
 
         oldpass.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         oldpass.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -170,12 +153,13 @@ public class changepass extends javax.swing.JFrame {
                 oldpassActionPerformed(evt);
             }
         });
-        jPanel1.add(oldpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 180, 320, 40));
+        jPanel1.add(oldpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 220, 280, 40));
 
-        reslntext.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        reslntext.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        reslntext.setForeground(new java.awt.Color(255, 255, 255));
         reslntext.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         reslntext.setText("Enter New Password:");
-        jPanel1.add(reslntext, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, 250, 40));
+        jPanel1.add(reslntext, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 290, 210, 40));
 
         newpass.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         newpass.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -184,12 +168,13 @@ public class changepass extends javax.swing.JFrame {
                 newpassActionPerformed(evt);
             }
         });
-        jPanel1.add(newpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 250, 320, 40));
+        jPanel1.add(newpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 290, 280, 40));
 
-        resemailtext.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        resemailtext.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        resemailtext.setForeground(new java.awt.Color(255, 255, 255));
         resemailtext.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         resemailtext.setText("Confirm Password:");
-        jPanel1.add(resemailtext, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 320, 250, 40));
+        jPanel1.add(resemailtext, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 360, 210, 40));
 
         conpass.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         conpass.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -198,29 +183,18 @@ public class changepass extends javax.swing.JFrame {
                 conpassActionPerformed(evt);
             }
         });
-        jPanel1.add(conpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 320, 320, 40));
+        jPanel1.add(conpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 360, 280, 40));
 
-        jLabel4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("LOGOUT");
-        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel4MouseClicked(evt);
-            }
-        });
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        back.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        back.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         back.setText("Back");
         back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backActionPerformed(evt);
             }
         });
-        jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 400, 100, 50));
+        jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 450, 70, 50));
 
-        save.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        save.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         save.setText("Save");
         save.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -232,7 +206,19 @@ public class changepass extends javax.swing.JFrame {
                 saveActionPerformed(evt);
             }
         });
-        jPanel1.add(save, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 400, 100, 50));
+        jPanel1.add(save, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 450, 70, 50));
+
+        iddisplay.setFont(new java.awt.Font("HP Simplified Jpan", 0, 36)); // NOI18N
+        iddisplay.setForeground(new java.awt.Color(255, 255, 255));
+        iddisplay.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        iddisplay.setText("(UID)");
+        jPanel1.add(iddisplay, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 130, 100, 70));
+
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Change Password");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, 570, 68));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 600));
 
@@ -263,52 +249,46 @@ public class changepass extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jLabel2MouseClicked
 
-    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel4MouseClicked
-
-    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_backActionPerformed
-
     private void saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveActionPerformed
-     
-       
+ try{
+            dbConnector dbc = new dbConnector();
+            Session sess = Session.getInstance();
+
+            String query = "SELECT * FROM tbl_user WHERE u_id = '"+sess.getUid()+"'";
+            ResultSet rs = dbc.getData(query);
+            if(rs.next()){
+                String  olddbpass = rs.getString("u_password");
+                String oldhash =  passwordHasher.hashPassword(oldpass.getText());
+
+                if(olddbpass.equals(oldhash)){
+                    String npass =  passwordHasher.hashPassword(newpass.getText());
+                    dbc.updateData("UPDATE tbl_user SET u_password = '"+npass+"'");
+                    JOptionPane.showMessageDialog(null, "Succesful Updated!");
+
+                    login lg = new login();
+                    lg.setVisible(true);
+                    this.dispose();
+                }else{
+                    JOptionPane.showMessageDialog(null, "Old Password is Incorrect!");
+                }
+
+            }
+        }catch(SQLException | NoSuchAlgorithmException ex){
+            System.out.println(""+ex);
+
+        }
     }//GEN-LAST:event_saveActionPerformed
 
     private void saveMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_saveMouseClicked
-try{
-        dbConnector dbc = new dbConnector();
-Session sess = Session.getInstance();
-
-
-    String query = "SELECT * FROM tbl_user WHERE u_id = '"+sess.getUid()+"'"; 
-    ResultSet rs = dbc.getData(query);
-    if(rs.next()){
-       String  olddbpass = rs.getString("u_password");
-       String oldhash =  passwordHasher.hashPassword(oldpass.getText());
-     
-     if(olddbpass.equals(oldhash)){
-         String npass =  passwordHasher.hashPassword(newpass.getText());
-         dbc.updateData("UPDATE tbl_user SET u_password = '"+npass+"'");
-          JOptionPane.showMessageDialog(null, "Succesful Updated!");
-          
-          
-          
-          login lg = new login();
-          lg.setVisible(true);
-          this.dispose();
-     }else{
-            JOptionPane.showMessageDialog(null, "Old Password is Incorrect!");
-     }
-      
-    }
-}catch(SQLException | NoSuchAlgorithmException ex){
-    System.out.println(""+ex);
-   
-    
-}
+       
     }//GEN-LAST:event_saveMouseClicked
+
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
+  
+        accountDetails ads = new  accountDetails();
+         ads.setVisible(true);
+         this.dispose();
+    }//GEN-LAST:event_backActionPerformed
 
     /**
      * @param args the command line arguments
@@ -349,19 +329,17 @@ Session sess = Session.getInstance();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel WELCOME4;
     private javax.swing.JLabel acc_fname;
     private javax.swing.JLabel acc_lname;
     private javax.swing.JButton back;
     private javax.swing.JTextField conpass;
     private javax.swing.JLabel iddisplay;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel navigation;
     private javax.swing.JTextField newpass;
     private javax.swing.JTextField oldpass;
     private javax.swing.JLabel resemailtext;
