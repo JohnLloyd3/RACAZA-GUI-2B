@@ -90,30 +90,35 @@ public class register extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        background1.setBackground(new java.awt.Color(142, 177, 217));
+        background1.setBackground(new java.awt.Color(255, 255, 255));
         background1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         attext1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        attext1.setForeground(new java.awt.Color(0, 0, 0));
         attext1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         attext1.setText("Account Type:");
         background1.add(attext1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 460, 330, 40));
 
         resfntext1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        resfntext1.setForeground(new java.awt.Color(0, 0, 0));
         resfntext1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         resfntext1.setText("First Name:");
         background1.add(resfntext1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, 330, 40));
 
         reslntext1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        reslntext1.setForeground(new java.awt.Color(0, 0, 0));
         reslntext1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         reslntext1.setText("Last Name:");
         background1.add(reslntext1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 160, 330, 40));
 
         resemailtext1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        resemailtext1.setForeground(new java.awt.Color(0, 0, 0));
         resemailtext1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         resemailtext1.setText("Email:");
         background1.add(resemailtext1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 330, 40));
 
         resusrntext1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        resusrntext1.setForeground(new java.awt.Color(0, 0, 0));
         resusrntext1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         resusrntext1.setText("Username:");
         background1.add(resusrntext1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 310, 330, 40));
@@ -145,8 +150,10 @@ public class register extends javax.swing.JFrame {
         });
         background1.add(ln, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 200, 330, 40));
 
-        resloginbutton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        resloginbutton.setBackground(new java.awt.Color(102, 153, 255));
+        resloginbutton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         resloginbutton.setText("Register");
+        resloginbutton.setBorder(null);
         resloginbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 resloginbuttonActionPerformed(evt);
@@ -155,6 +162,7 @@ public class register extends javax.swing.JFrame {
         background1.add(resloginbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 660, 130, 50));
 
         resps2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        resps2.setForeground(new java.awt.Color(0, 0, 0));
         resps2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         resps2.setText("Password:");
         background1.add(resps2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 380, 330, 40));
@@ -188,7 +196,7 @@ public class register extends javax.swing.JFrame {
         lll1.setBackground(new java.awt.Color(123, 159, 207));
         lll1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/supp logo (1)-modified.png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo_(3)-modified.png"))); // NOI18N
         lll1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
@@ -230,8 +238,10 @@ public class register extends javax.swing.JFrame {
         WELCOME4.setText("Register Form");
         background1.add(WELCOME4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, 620, 80));
 
-        recancelbutton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        recancelbutton.setBackground(new java.awt.Color(102, 153, 255));
+        recancelbutton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         recancelbutton.setText("Cancel");
+        recancelbutton.setBorder(null);
         recancelbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 recancelbuttonActionPerformed(evt);
@@ -243,10 +253,7 @@ public class register extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(background1, javax.swing.GroupLayout.PREFERRED_SIZE, 877, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(background1, javax.swing.GroupLayout.PREFERRED_SIZE, 877, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -275,10 +282,10 @@ public class register extends javax.swing.JFrame {
             String pass = passwordHasher.hashPassword(ps.getText());
             
             if(dbc.insertData("INSERT INTO tbl_user (u_firstname, u_lastname, u_email,"
-                + " u_username, u_password, u_type, u_status) "
+                + " u_username, u_password, u_type, u_status, image) "
                 + "VALUES ('"+ fn.getText() + "','" + ln.getText() + "','" + em.getText()
                 + "','" + us.getText() + "','" + pass + "','" +
-                at.getSelectedItem() + "','Pending')")>0){
+                at.getSelectedItem() + "','Pending','defaultimage.png')")>0){
             
             
         

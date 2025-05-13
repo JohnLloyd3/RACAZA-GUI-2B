@@ -7,8 +7,13 @@ package user;
 
 import config.Session;
 import java.awt.Color;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import racazagui.login;
+import org.netbeans.lib.awtextra.AbsoluteLayout;
+import user.userpetadopt;
+import user.userAdoptions;
+import user.AccountDetails;
 
 /**
  *
@@ -43,9 +48,15 @@ public class userDashboard extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         acc_fname = new javax.swing.JLabel();
         acc_lname = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        userprofile = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         WELCOME3 = new javax.swing.JLabel();
+        petstable = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        myadoptions = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -55,23 +66,26 @@ public class userDashboard extends javax.swing.JFrame {
         });
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.setLayout(new AbsoluteLayout());
 
-        background.setBackground(new java.awt.Color(142, 177, 217));
+        background.setBackground(new java.awt.Color(255, 255, 255));
         background.setForeground(new java.awt.Color(255, 255, 255));
-        background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        background.setLayout(new AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(123, 159, 207));
+        jPanel2.setLayout(new AbsoluteLayout());
 
         acc_id.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         acc_id.setForeground(new java.awt.Color(255, 255, 255));
         acc_id.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         acc_id.setText("ID");
+        jPanel2.add(acc_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 801, 280, 42));
 
         jlabel.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jlabel.setForeground(new java.awt.Color(255, 255, 255));
         jlabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jlabel.setText("Current User:");
+        jPanel2.add(jlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 738, 280, 45));
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -82,44 +96,28 @@ public class userDashboard extends javax.swing.JFrame {
                 jLabel2MouseClicked(evt);
             }
         });
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 663, 280, 44));
 
         jPanel3.setBackground(new java.awt.Color(142, 177, 217));
         jPanel3.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel3.setLayout(new AbsoluteLayout());
 
         acc_fname.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         acc_fname.setForeground(new java.awt.Color(255, 255, 255));
         acc_fname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         acc_fname.setText("User");
+        jPanel3.add(acc_fname, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 117, 202, 29));
 
         acc_lname.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         acc_lname.setForeground(new java.awt.Color(255, 255, 255));
         acc_lname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         acc_lname.setText("User");
+        jPanel3.add(acc_lname, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 152, 202, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Screenshot 2025-04-30 193832-modified.png"))); // NOI18N
+        userprofile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/defaultimage.png"))); // NOI18N
+        jPanel3.add(userprofile, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 100, 110));
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(acc_fname, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(acc_lname, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addComponent(jLabel4)
-                .addContainerGap(48, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
-                .addComponent(acc_fname, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(acc_lname)
-                .addGap(5, 5, 5))
-        );
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 102, -1, -1));
 
         jLabel1.setBackground(new java.awt.Color(142, 177, 217));
         jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -131,91 +129,141 @@ public class userDashboard extends javax.swing.JFrame {
                 jLabel1MouseClicked(evt);
             }
         });
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 570, 280, 45));
 
         WELCOME3.setFont(new java.awt.Font("HP Simplified Jpan", 0, 24)); // NOI18N
         WELCOME3.setForeground(new java.awt.Color(255, 255, 255));
         WELCOME3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         WELCOME3.setText(" USER DASHBOARD");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jlabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(acc_id, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(WELCOME3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(42, Short.MAX_VALUE)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(WELCOME3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 309, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addComponent(jlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(acc_id, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(7, 7, 7))
-        );
+        jPanel2.add(WELCOME3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 6, 280, 70));
 
         background.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 280, 850));
 
-        jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1070, 720));
+        petstable.setBackground(new java.awt.Color(123, 159, 207));
+        petstable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                petstableMouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                petstableMousePressed(evt);
+            }
+        });
+        petstable.setLayout(null);
+
+        jLabel3.setBackground(new java.awt.Color(123, 159, 207));
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Pets");
+        petstable.add(jLabel3);
+        jLabel3.setBounds(100, 220, 80, 30);
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pets.png"))); // NOI18N
+        petstable.add(jLabel7);
+        jLabel7.setBounds(90, 100, 100, 110);
+
+        background.add(petstable, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 130, 280, 370));
+
+        myadoptions.setBackground(new java.awt.Color(123, 159, 207));
+        myadoptions.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                myadoptionsMouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                myadoptionsMousePressed(evt);
+            }
+        });
+        myadoptions.setLayout(null);
+
+        jLabel4.setBackground(new java.awt.Color(123, 159, 207));
+        jLabel4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("My Adoptions");
+        myadoptions.add(jLabel4);
+        jLabel4.setBounds(0, 220, 280, 30);
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Adoption.png"))); // NOI18N
+        myadoptions.add(jLabel8);
+        jLabel8.setBounds(90, 100, 100, 110);
+
+        background.add(myadoptions, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 130, 280, 370));
+
+        jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1070, 710));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 24, Short.MAX_VALUE)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1072, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 713, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(36, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    // Utility method to set profile image with fallback
+    private void setProfileImage(javax.swing.JLabel label, String imageFileName) {
+        String basePath = "src/images/";
+        String imagePath = basePath + (imageFileName != null ? imageFileName : "");
+        java.io.File imgFile = new java.io.File(imagePath);
+        config.profile prof = new config.profile();
+        if (imgFile.exists() && imgFile.isFile()) {
+            label.setIcon(prof.ResizeImage(imagePath, null, label));
+        } else {
+            label.setIcon(prof.ResizeImage(basePath + "defaultimage.png", null, label));
+        }
+    }
+
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
- Session sess = Session.getInstance();
-       if(sess.getUid()==0){
-         JOptionPane.showMessageDialog(null,"No Account, Log in First!");
-           login lg = new login ();
-         lg.setVisible(true);
-         this.dispose();       
-       }else {
-           acc_id.setText(""+sess.getUid());
-           acc_fname.setText(""+sess.getFname());
-           acc_lname.setText(""+sess.getLname());
-              
-       }     
+        Session sess = Session.getInstance();
+        if (sess.getUid() == 0) {
+            JOptionPane.showMessageDialog(null, "No Account, Log in First!");
+            login lg = new login();
+            lg.setVisible(true);
+            this.dispose();
+        } else {
+            acc_id.setText("" + sess.getUid());
+            acc_fname.setText("" + sess.getFname());
+            acc_lname.setText("" + sess.getLname());
+            // Set user profile image with fallback to defaultimage.png
+            setProfileImage(userprofile, sess.getImage());
+        }
     }//GEN-LAST:event_formWindowActivated
 
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        AccountDetails accd = new AccountDetails (); accd.setVisible(true); this.dispose();
+
+    }//GEN-LAST:event_jLabel1MouseClicked
+
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
- new login().setVisible(true);
- this.dispose(); 
+        new login().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jLabel2MouseClicked
 
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-      accountDetails accd = new accountDetails (); accd.setVisible(true); this.dispose();
-    }//GEN-LAST:event_jLabel1MouseClicked
+    private void petstableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_petstableMouseClicked
+        new userpetadopt().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_petstableMouseClicked
+
+    private void petstableMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_petstableMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_petstableMousePressed
+
+    private void myadoptionsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_myadoptionsMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_myadoptionsMouseClicked
+
+    private void myadoptionsMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_myadoptionsMousePressed
+      new userAdoptions().setVisible(true);
+      this.dispose();
+    }//GEN-LAST:event_myadoptionsMousePressed
 
     /**
      * @param args the command line arguments
@@ -260,10 +308,16 @@ public class userDashboard extends javax.swing.JFrame {
     private javax.swing.JPanel background;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel jlabel;
+    private javax.swing.JPanel myadoptions;
+    private javax.swing.JPanel petstable;
+    private javax.swing.JLabel userprofile;
     // End of variables declaration//GEN-END:variables
 }

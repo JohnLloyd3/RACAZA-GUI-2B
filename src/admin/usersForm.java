@@ -77,7 +77,7 @@ public class usersForm extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(142, 177, 217));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         usersTable.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
@@ -91,22 +91,22 @@ public class usersForm extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(usersTable);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, 970, 780));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 40, 640, 590));
 
         jPanel2.setBackground(new java.awt.Color(123, 159, 207));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        acc_id.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        acc_id.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         acc_id.setForeground(new java.awt.Color(255, 255, 255));
         acc_id.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         acc_id.setText("ID");
-        jPanel2.add(acc_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 800, 260, -1));
+        jPanel2.add(acc_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 610, 260, -1));
 
-        jLabel5.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Current User:");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 770, 260, -1));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 580, 260, -1));
 
         p_edit.setBackground(new java.awt.Color(123, 159, 207));
         p_edit.setForeground(new java.awt.Color(255, 255, 255));
@@ -133,9 +133,9 @@ public class usersForm extends javax.swing.JFrame {
             }
         });
         p_edit.add(jLabel7);
-        jLabel7.setBounds(110, 20, 50, 20);
+        jLabel7.setBounds(100, 10, 50, 20);
 
-        jPanel2.add(p_edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 260, 60));
+        jPanel2.add(p_edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 260, 50));
 
         p_add.setBackground(new java.awt.Color(123, 159, 207));
         p_add.setForeground(new java.awt.Color(255, 255, 255));
@@ -162,14 +162,14 @@ public class usersForm extends javax.swing.JFrame {
             }
         });
         p_add.add(jLabel2);
-        jLabel2.setBounds(110, 20, 50, 20);
+        jLabel2.setBounds(100, 20, 50, 20);
 
-        jPanel2.add(p_add, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 260, 60));
+        jPanel2.add(p_add, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 260, 50));
 
         jPanel3.setBackground(new java.awt.Color(142, 177, 217));
         jPanel3.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Screenshot 2025-04-30 193832-modified.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/defaultimage.png"))); // NOI18N
 
         acc_lname.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         acc_lname.setForeground(new java.awt.Color(255, 255, 255));
@@ -195,7 +195,7 @@ public class usersForm extends javax.swing.JFrame {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap(28, Short.MAX_VALUE)
+                .addContainerGap(30, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(acc_lname)
@@ -213,7 +213,7 @@ public class usersForm extends javax.swing.JFrame {
                 ActiveActionPerformed(evt);
             }
         });
-        jPanel2.add(Active, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 520, 170, 50));
+        jPanel2.add(Active, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 420, 280, 40));
 
         back.setBackground(new java.awt.Color(255, 255, 255));
         back.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -223,7 +223,7 @@ public class usersForm extends javax.swing.JFrame {
                 backActionPerformed(evt);
             }
         });
-        jPanel2.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 660, 130, 40));
+        jPanel2.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 530, 270, 40));
 
         Pending.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Pending.setText("Pending");
@@ -232,17 +232,17 @@ public class usersForm extends javax.swing.JFrame {
                 PendingActionPerformed(evt);
             }
         });
-        jPanel2.add(Pending, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 590, 170, 50));
+        jPanel2.add(Pending, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 470, 270, 40));
 
-        WELCOME3.setFont(new java.awt.Font("HP Simplified Jpan", 0, 24)); // NOI18N
+        WELCOME3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         WELCOME3.setForeground(new java.awt.Color(255, 255, 255));
         WELCOME3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         WELCOME3.setText("USERS FORM");
-        jPanel2.add(WELCOME3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 70));
+        jPanel2.add(WELCOME3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 70));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 840));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 650));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 1300, 840));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, 650));
 
         pack();
         setLocationRelativeTo(null);
@@ -324,7 +324,7 @@ public class usersForm extends javax.swing.JFrame {
               crf.ln.setText(""+rs.getString("u_lastname"));
                 crf.em.setText(""+rs.getString("u_email"));
                 crf.us.setText(""+rs.getString("u_username"));
-                crf.ps.setText(""+rs.getString("u_password"));
+                crf.passwordfield.setText(""+rs.getString("u_password"));
                  crf.ut.setSelectedItem(""+rs.getString("u_type"));
                   crf.uss.setSelectedItem(""+rs.getString("u_status"));
                   crf.add.setEnabled(false);

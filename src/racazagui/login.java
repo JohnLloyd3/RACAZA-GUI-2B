@@ -6,6 +6,7 @@
 package racazagui;
 
 import admin.admindashboard;
+import config.Logs;
 import config.Session;
 import config.dbConnector;
 import config.passwordHasher;
@@ -48,11 +49,12 @@ public class login extends javax.swing.JFrame {
          if(hashedPass.equals(rehashedPass)){
              status = resultSet.getString("u_status");
             type = resultSet.getString("u_type");
-             Session sess = Session.getInstance();
+            Session sess = Session.getInstance();
             sess.setUid(resultSet.getInt("u_id"));
             sess.setFname(resultSet.getString("u_firstname"));
             sess.setLname(resultSet.getString("u_lastname"));
             sess.setEmail(resultSet.getString("u_email"));
+            sess.setUsername(resultSet.getString("u_username"));
             sess.setType(resultSet.getString("u_type"));
             sess.setStatus(resultSet.getString("u_status"));    
             return true; 
@@ -97,43 +99,49 @@ public class login extends javax.swing.JFrame {
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        background.setBackground(new java.awt.Color(142, 177, 217));
+        background.setBackground(new java.awt.Color(255, 255, 255));
         background.setForeground(new java.awt.Color(255, 255, 255));
         background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         navigation.setBackground(new java.awt.Color(123, 159, 207));
         navigation.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/supp logo (1)-modified.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/petdefault.png"))); // NOI18N
         navigation.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
 
-        jLabel1.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Love . Care . Protect");
         navigation.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 270, -1));
 
-        jLabel4.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Support Us!");
         navigation.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 500, 270, -1));
 
-        jLabel5.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("About Us!");
         navigation.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 270, -1));
 
-        jLabel6.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Join Us!");
         navigation.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 270, -1));
 
         background.add(navigation, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 590));
 
-        pstext.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        pstext.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        pstext.setForeground(new java.awt.Color(0, 0, 0));
         pstext.setText("Password:");
         background.add(pstext, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 410, 90, 40));
 
-        ustext.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        ustext.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ustext.setForeground(new java.awt.Color(0, 0, 0));
         ustext.setText("Username:");
         background.add(ustext, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 340, 90, 40));
 
@@ -147,7 +155,8 @@ public class login extends javax.swing.JFrame {
         });
         background.add(loginbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 470, 190, 40));
 
-        clickheretoregister.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        clickheretoregister.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        clickheretoregister.setForeground(new java.awt.Color(0, 0, 0));
         clickheretoregister.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         clickheretoregister.setText("new user? click here to register.");
         clickheretoregister.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -169,14 +178,14 @@ public class login extends javax.swing.JFrame {
         ps.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         background.add(ps, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 410, 330, 40));
 
-        WELCOME3.setFont(new java.awt.Font("HP Simplified Jpan", 0, 36)); // NOI18N
-        WELCOME3.setForeground(new java.awt.Color(255, 255, 255));
+        WELCOME3.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        WELCOME3.setForeground(new java.awt.Color(0, 0, 0));
         WELCOME3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         WELCOME3.setText("CUDDLE BUDDIES");
         background.add(WELCOME3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 590, 80));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo (3)-modified.png"))); // NOI18N
-        background.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 90, -1, -1));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/petdefault.png"))); // NOI18N
+        background.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 70, -1, -1));
 
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 590));
 
@@ -199,11 +208,14 @@ public class login extends javax.swing.JFrame {
       
         if(type.equals("Admin")){
               JOptionPane.showMessageDialog(null,"Login Successfully!");
+               Logs.logAction(Session.getInstance().getUid(), "Admin logged in");
               admindashboard ads = new admindashboard();
               ads.setVisible(true);
               this.dispose();
         
         }else if(type.equals("User")){
+            Logs.logAction(Session.getInstance().getUid(), "User logged in");
+
           JOptionPane.showMessageDialog(null,"Login Successfully!");
           userDashboard usd = new userDashboard();
               usd.setVisible(true);

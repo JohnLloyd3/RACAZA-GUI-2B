@@ -66,6 +66,11 @@ pst.close();
         System.out.println("Connection Error: "+ex);
 }
  }
+
+    // Method to get the current database connection
+    public Connection getConnection() {
+        return connect;
+    }
 }
     
      
