@@ -47,6 +47,7 @@ public class petspage extends javax.swing.JFrame {
         editpet = new javax.swing.JButton();
         viewpet = new javax.swing.JButton();
         adoptpet = new javax.swing.JButton();
+        sortpets = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -199,6 +200,17 @@ public class petspage extends javax.swing.JFrame {
         });
         background.add(adoptpet, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 40, 140, 50));
 
+        sortpets.setBackground(new java.awt.Color(255, 255, 255));
+        sortpets.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        sortpets.setForeground(new java.awt.Color(0, 0, 0));
+        sortpets.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Filter Pets", "Available", "Pending", "Adopted" }));
+        sortpets.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sortpetsActionPerformed(evt);
+            }
+        });
+        background.add(sortpets, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 40, 140, 50));
+
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, 650));
 
         pack();
@@ -309,6 +321,11 @@ public class petspage extends javax.swing.JFrame {
         new adoption.adoptpet(petId).setVisible(true);
     }//GEN-LAST:event_adoptpetActionPerformed
 
+    private void sortpetsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortpetsActionPerformed
+        String selectedStatus = sortpets.getSelectedItem().toString();
+        filterPets(selectedStatus);
+    }//GEN-LAST:event_sortpetsActionPerformed
+
     // Load pets from the database and display in the table
     private void loadPets() {
         String[] columns = {"ID", "Name", "Species", "Breed", "Age", "Gender", "Color", "Status"};
@@ -353,7 +370,58 @@ public class petspage extends javax.swing.JFrame {
             javax.swing.JOptionPane.showMessageDialog(this, "Error loading pets: " + e.getMessage());
         }
     }
+    private void filterPets(String status) {
+        String[] columns = {"ID", "Name", "Species", "Breed", "Age", "Gender", "Color", "Status"};
+        DefaultTableModel model = new DefaultTableModel(null, columns) {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
 
+        String sql = "SELECT * FROM pets";
+        if (!status.equals("Filter Pets")) {
+            if (status.equalsIgnoreCase("Pending")) {
+                sql += " WHERE status = 'Pending Adoption Approval'";
+            } else if (status.equalsIgnoreCase("Available")) {
+                sql += " WHERE status = 'Available'";
+            } else if (status.equalsIgnoreCase("Adopted")) {
+                sql += " WHERE status = 'Adopted'";
+            }
+        }
+
+        try {
+            dbConnector dbc = new dbConnector();
+            ResultSet rs = dbc.getData(sql);
+            while (rs.next()) {
+                String imagePath = rs.getString("image_path");
+                if (imagePath == null || imagePath.trim().isEmpty()) {
+                    imagePath = "src/images/petdefault.png";
+                }
+                ImageIcon icon = new ImageIcon(imagePath);
+                // Resize image for table
+                Image img = icon.getImage().getScaledInstance(40, 40, Image.SCALE_SMOOTH);
+                icon = new ImageIcon(img);
+                model.addRow(new Object[]{
+                    rs.getInt("pet_id"),
+                    rs.getString("name"),
+                    rs.getString("species"),
+                    rs.getString("breed"),
+                    rs.getInt("age"),
+                    rs.getString("gender"),
+                    rs.getString("color"),
+                    rs.getString("status"),
+                    icon
+                });
+            }
+            petstable.setModel(model);
+            petstable.setRowHeight(40);
+        } catch (SQLException e) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Error loading pets: " + e.getMessage());
+        }
+    }
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -403,6 +471,7 @@ public class petspage extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel jlabel;
     private javax.swing.JTable petstable;
+    private javax.swing.JComboBox<String> sortpets;
     private javax.swing.JButton viewpet;
     // End of variables declaration//GEN-END:variables
 }

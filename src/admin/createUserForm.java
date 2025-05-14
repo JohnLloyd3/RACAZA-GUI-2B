@@ -31,6 +31,40 @@ public class createUserForm extends javax.swing.JFrame {
             passwordfield.setEnabled(false);
         }
     }
+    
+    private void updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateActionPerformed
+
+        if(fn.getText().isEmpty()||ln.getText().isEmpty()
+            ||em.getText().isEmpty()||us.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "All fields are required!"); 
+        }else if(updateCheck()){
+            System.out.println("Duplicate Exist");
+        }else{
+            dbConnector dbc = new dbConnector();
+            // Do not update password when updating user
+            String sql = "UPDATE tbl_user SET u_firstname = ?, u_lastname = ?, u_email = ?, u_username = ?, u_type = ?, u_status = ? WHERE u_id = ?";
+            try (java.sql.PreparedStatement pst = dbc.getConnection().prepareStatement(sql)) {
+                pst.setString(1, fn.getText());
+                pst.setString(2, ln.getText());
+                pst.setString(3, em.getText());
+                pst.setString(4, us.getText());
+                pst.setString(5, ut.getSelectedItem().toString());
+                pst.setString(6, uss.getSelectedItem().toString());
+                pst.setInt(7, Integer.parseInt(uid.getText()));
+                pst.executeUpdate();
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, "Error updating user: " + ex.getMessage());
+                return;
+            }
+            // Disable password field after update
+            passwordfield.setEnabled(false);
+            usersForm uf = new  usersForm();
+            uf.setVisible(true);
+            this.dispose();
+        }
+    
+     
+    }//GEN-LAST:event_updateActionPerformed
         
        public boolean duplicateCheck(){
            dbConnector dbc = new dbConnector();
@@ -134,7 +168,7 @@ public class createUserForm extends javax.swing.JFrame {
         lll1.setBackground(new java.awt.Color(123, 159, 207));
         lll1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/supp logo (1)-modified.png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo_(3)-modified.png"))); // NOI18N
         lll1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -345,9 +379,9 @@ public class createUserForm extends javax.swing.JFrame {
         jPanel1.add(clear, new org.netbeans.lib.awtextra.AbsoluteConstraints(327, 666, 110, 40));
 
         WELCOME4.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        WELCOME4.setForeground(new java.awt.Color(255, 255, 255));
+        WELCOME4.setForeground(new java.awt.Color(0, 0, 0));
         WELCOME4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        WELCOME4.setText("Create User ");
+        WELCOME4.setText("Edit User");
         jPanel1.add(WELCOME4, new org.netbeans.lib.awtextra.AbsoluteConstraints(278, 0, 475, 60));
 
         resuidtext.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -377,30 +411,7 @@ public class createUserForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_deleteActionPerformed
 
-    private void updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateActionPerformed
-
-        if(fn.getText().isEmpty()||ln.getText().isEmpty()
-            ||em.getText().isEmpty()||us.getText().isEmpty()
-            ||passwordfield.getText().isEmpty()){
-            JOptionPane.showMessageDialog(null, "All fields are required!");
-        }else if (passwordfield.getText().length() < 8) {
-            JOptionPane.showMessageDialog(null, "Password must be at least 8 characters long");
-            passwordfield.setText("");
-        }else if(updateCheck()){
-            System.out.println("Duplicate Exist");
-        }else{
-            dbConnector dbc = new dbConnector();
-            dbc.updateData("UPDATE tbl_user SET u_firstname = '"+fn.getText()+"',u_lastname = '"
-                +ln.getText()+"',u_email='"+em.getText()+"'"
-                + ", u_username ='"+us.getText()+"',u_password = '"+passwordfield.getText()+"'"
-                + ",u_type = '"+ut.getSelectedItem()+"',u_status = '"+uss.getSelectedItem()+"'WHERE u_id = '"+uid.getText()+"' ");
-            usersForm uf = new  usersForm();
-            uf.setVisible(true);
-            this.dispose();
-        }
-        // Disable password field when updating
-        passwordfield.setEnabled(false);
-    }//GEN-LAST:event_updateActionPerformed
+    
 
     private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
         // TODO add your handling code here:
@@ -414,10 +425,6 @@ public class createUserForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_utActionPerformed
 
-    private void passwordfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordfieldActionPerformed
-
-    }//GEN-LAST:event_passwordfieldActionPerformed
-
     private void ussActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ussActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ussActionPerformed
@@ -428,9 +435,8 @@ public class createUserForm extends javax.swing.JFrame {
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
 
-        if(uid.getText().isEmpty()||ln.getText().isEmpty()
-            ||em.getText().isEmpty()||us.getText().isEmpty()
-            ||passwordfield.getText().isEmpty()){
+        if(ln.getText().isEmpty()
+            ||em.getText().isEmpty()||us.getText().isEmpty()){
             JOptionPane.showMessageDialog(null, "All fields are required!");
         }else if (passwordfield.getText().length() < 8) {
             JOptionPane.showMessageDialog(null, "Password must be at least 8 characters long");
@@ -469,6 +475,10 @@ public class createUserForm extends javax.swing.JFrame {
     private void uidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uidActionPerformed
 
     }//GEN-LAST:event_uidActionPerformed
+
+    private void passwordfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordfieldActionPerformed
+
+    }//GEN-LAST:event_passwordfieldActionPerformed
     
     
 

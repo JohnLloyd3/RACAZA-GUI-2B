@@ -5,10 +5,12 @@
  */
 package user;
 
+import adoption.viewadoption;
 import config.dbConnector;
 import config.Session;
 import javax.swing.table.DefaultTableModel;
 import java.sql.ResultSet;
+import javax.swing.JOptionPane;
 
 
 public class userAdoptions extends javax.swing.JFrame {
@@ -39,6 +41,7 @@ public class userAdoptions extends javax.swing.JFrame {
         WELCOME3 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         adoptionsrecord = new javax.swing.JTable();
+        viewadoption = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -105,6 +108,20 @@ public class userAdoptions extends javax.swing.JFrame {
 
         background.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, 640, 400));
 
+        viewadoption.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        viewadoption.setText("View my Adoption");
+        viewadoption.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                viewadoptionMouseClicked(evt);
+            }
+        });
+        viewadoption.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewadoptionActionPerformed(evt);
+            }
+        });
+        background.add(viewadoption, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 100, 200, 50));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -138,6 +155,20 @@ public class userAdoptions extends javax.swing.JFrame {
         new userDashboard().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_backbtnMouseClicked
+
+    private void viewadoptionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_viewadoptionMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_viewadoptionMouseClicked
+
+    private void viewadoptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewadoptionActionPerformed
+        int selectedRow = adoptionsrecord.getSelectedRow();
+        if (selectedRow == -1) {
+            JOptionPane.showMessageDialog(this, "Please select an adoption record to view!");
+            return;
+        }
+        int adoptionId = Integer.parseInt(adoptionsrecord.getValueAt(selectedRow, 0).toString());
+        new viewadoption(adoptionId).setVisible(true);
+    }//GEN-LAST:event_viewadoptionActionPerformed
 
     private void loadUserAdoptedPets() {
         String[] columns = {"Adoption ID", "Pet Name", "Species", "Breed", "Age", "Gender", "Color", "Adoption Date"};
@@ -225,5 +256,6 @@ public class userAdoptions extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel jlabel;
+    private javax.swing.JButton viewadoption;
     // End of variables declaration//GEN-END:variables
 }

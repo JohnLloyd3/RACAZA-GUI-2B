@@ -10,9 +10,7 @@ public class viewadoption extends javax.swing.JFrame {
 
     private int adoptionId;
 
-    /**
-     * Creates new form viewadoption
-     */
+   
     public viewadoption() {
         initComponents();
     }
@@ -37,6 +35,7 @@ public class viewadoption extends javax.swing.JFrame {
             pst.setInt(1, adoptionId);
             java.sql.ResultSet rs = pst.executeQuery();
             if (rs.next()) {
+                adoptionID.setText("ID: " + rs.getString("adoption_id"));
                 petimage1.setText(rs.getString("pet_name"));
                 Species.setText("Species: " + rs.getString("species"));
                 status.setText("Status: " + rs.getString("status"));
@@ -67,6 +66,7 @@ public class viewadoption extends javax.swing.JFrame {
         jPanel7 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
+        adoptionID = new javax.swing.JLabel();
         petimage = new javax.swing.JLabel();
         editpet = new javax.swing.JButton();
         petimage1 = new javax.swing.JLabel();
@@ -74,6 +74,7 @@ public class viewadoption extends javax.swing.JFrame {
         Species = new javax.swing.JLabel();
         adoptionname = new javax.swing.JLabel();
         adoptiondate = new javax.swing.JLabel();
+        printthis = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -89,6 +90,11 @@ public class viewadoption extends javax.swing.JFrame {
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel16.setText("Pet Viewing");
         jPanel8.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 500, -1));
+
+        adoptionID.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        adoptionID.setForeground(new java.awt.Color(255, 255, 255));
+        adoptionID.setText("ID:");
+        jPanel8.add(adoptionID, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 150, 60));
 
         jPanel7.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 60));
 
@@ -106,7 +112,7 @@ public class viewadoption extends javax.swing.JFrame {
                 editpetActionPerformed(evt);
             }
         });
-        jPanel7.add(editpet, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 440, 310, -1));
+        jPanel7.add(editpet, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 450, 310, -1));
 
         petimage1.setBackground(new java.awt.Color(0, 153, 255));
         petimage1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -139,6 +145,18 @@ public class viewadoption extends javax.swing.JFrame {
         adoptiondate.setText("Adoption Date");
         jPanel7.add(adoptiondate, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 320, 190, 30));
 
+        printthis.setBackground(new java.awt.Color(46, 134, 222));
+        printthis.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        printthis.setText("Print");
+        printthis.setBorder(null);
+        printthis.setPreferredSize(new java.awt.Dimension(350, 40));
+        printthis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                printthisActionPerformed(evt);
+            }
+        });
+        jPanel7.add(printthis, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 400, 310, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -168,6 +186,11 @@ public class viewadoption extends javax.swing.JFrame {
 
         this.dispose();
     }//GEN-LAST:event_editpetActionPerformed
+
+    private void printthisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_printthisActionPerformed
+        config.PanelPrinter printer = new config.PanelPrinter(jPanel7);
+        printer.printPanel();
+    }//GEN-LAST:event_printthisActionPerformed
 
     /**
      * @param args the command line arguments
@@ -206,6 +229,7 @@ public class viewadoption extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Species;
+    private javax.swing.JLabel adoptionID;
     private javax.swing.JLabel adoptiondate;
     private javax.swing.JLabel adoptionname;
     private javax.swing.JButton editpet;
@@ -214,6 +238,7 @@ public class viewadoption extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JLabel petimage;
     private javax.swing.JLabel petimage1;
+    private javax.swing.JButton printthis;
     private javax.swing.JLabel status;
     // End of variables declaration//GEN-END:variables
 }

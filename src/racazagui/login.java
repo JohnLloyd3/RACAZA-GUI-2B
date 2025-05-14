@@ -94,6 +94,7 @@ public class login extends javax.swing.JFrame {
         ps = new javax.swing.JPasswordField();
         WELCOME3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        forgotpassword = new javax.swing.JLabel();
 
         jCheckBox1.setText("jCheckBox1");
 
@@ -164,7 +165,7 @@ public class login extends javax.swing.JFrame {
                 clickheretoregisterMouseClicked(evt);
             }
         });
-        background.add(clickheretoregister, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 510, 300, 50));
+        background.add(clickheretoregister, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 510, 300, 50));
 
         us.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         us.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -186,6 +187,17 @@ public class login extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/petdefault.png"))); // NOI18N
         background.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 70, -1, -1));
+
+        forgotpassword.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        forgotpassword.setForeground(new java.awt.Color(0, 0, 0));
+        forgotpassword.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        forgotpassword.setText("Forgot Pasword");
+        forgotpassword.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                forgotpasswordMouseClicked(evt);
+            }
+        });
+        background.add(forgotpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 560, 300, -1));
 
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 590));
 
@@ -245,6 +257,10 @@ public class login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_usActionPerformed
 
+    private void forgotpasswordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_forgotpasswordMouseClicked
+      new emailverification().setVisible(true);
+    }//GEN-LAST:event_forgotpasswordMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -284,6 +300,7 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JLabel WELCOME3;
     private javax.swing.JPanel background;
     private javax.swing.JLabel clickheretoregister;
+    private javax.swing.JLabel forgotpassword;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

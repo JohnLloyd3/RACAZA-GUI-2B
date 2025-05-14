@@ -66,7 +66,6 @@ public class usersForm extends javax.swing.JFrame {
         acc_fname = new javax.swing.JLabel();
         Active = new javax.swing.JButton();
         back = new javax.swing.JButton();
-        Pending = new javax.swing.JButton();
         WELCOME3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -208,31 +207,24 @@ public class usersForm extends javax.swing.JFrame {
         Active.setBackground(new java.awt.Color(123, 159, 207));
         Active.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Active.setText("Active");
+        Active.setBorder(null);
         Active.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ActiveActionPerformed(evt);
             }
         });
-        jPanel2.add(Active, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 420, 280, 40));
+        jPanel2.add(Active, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 420, 270, 40));
 
-        back.setBackground(new java.awt.Color(255, 255, 255));
+        back.setBackground(new java.awt.Color(123, 159, 207));
         back.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         back.setText("BACK");
+        back.setBorder(null);
         back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backActionPerformed(evt);
             }
         });
-        jPanel2.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 530, 270, 40));
-
-        Pending.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        Pending.setText("Pending");
-        Pending.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PendingActionPerformed(evt);
-            }
-        });
-        jPanel2.add(Pending, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 470, 270, 40));
+        jPanel2.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 480, 270, 40));
 
         WELCOME3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         WELCOME3.setForeground(new java.awt.Color(255, 255, 255));
@@ -255,12 +247,33 @@ public class usersForm extends javax.swing.JFrame {
     }//GEN-LAST:event_backActionPerformed
 
     private void ActiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActiveActionPerformed
-   
+        int selectedRow = usersTable.getSelectedRow();
+        if (selectedRow == -1) {
+            JOptionPane.showMessageDialog(this, "Please select a user to activate!");
+            return;
+        }
+        String currentStatus = usersTable.getValueAt(selectedRow, 4).toString();
+        if (!currentStatus.equalsIgnoreCase("Pending")) {
+            JOptionPane.showMessageDialog(this, "Selected user is not in Pending status.");
+            return;
+        }
+        int userId = Integer.parseInt(usersTable.getValueAt(selectedRow, 0).toString());
+        try {
+            dbConnector dbc = new dbConnector();
+            String sql = "UPDATE tbl_user SET u_status = 'Active' WHERE u_id = ?";
+            java.sql.PreparedStatement pst = dbc.getConnection().prepareStatement(sql);
+            pst.setInt(1, userId);
+            int result = pst.executeUpdate();
+            if (result > 0) {
+                JOptionPane.showMessageDialog(this, "User status updated to Active.");
+                displayData();
+            } else {
+                JOptionPane.showMessageDialog(this, "Failed to update user status.");
+            }
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(this, "Error updating user status: " + ex.getMessage());
+        }
     }//GEN-LAST:event_ActiveActionPerformed
-
-    private void PendingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PendingActionPerformed
-   
-    }//GEN-LAST:event_PendingActionPerformed
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
       Session sess = Session.getInstance();
@@ -318,24 +331,24 @@ public class usersForm extends javax.swing.JFrame {
            TableModel tbl = usersTable.getModel();
            ResultSet rs = dbc.getData("SELECT * FROM tbl_user WHERE u_id = '"+tbl.getValueAt(rowIndex,0)+"'");
           if(rs.next()){
-          createUserForm crf = new createUserForm();
-              crf.uid.setText(""+rs.getInt("u_id"));
-              crf.fn.setText(""+rs.getString("u_firstname"));
-              crf.ln.setText(""+rs.getString("u_lastname"));
-                crf.em.setText(""+rs.getString("u_email"));
-                crf.us.setText(""+rs.getString("u_username"));
-                crf.passwordfield.setText(""+rs.getString("u_password"));
-                 crf.ut.setSelectedItem(""+rs.getString("u_type"));
-                  crf.uss.setSelectedItem(""+rs.getString("u_status"));
-                  crf.add.setEnabled(false);
-                  crf.update.setEnabled(true);
-              crf.setVisible(true);
+          edituser eu = new edituser();
+              eu.uid.setText(""+rs.getInt("u_id"));
+              eu.fn.setText(""+rs.getString("u_firstname"));
+              eu.ln.setText(""+rs.getString("u_lastname"));
+              eu.em.setText(""+rs.getString("u_email"));
+              eu.us.setText(""+rs.getString("u_username"));
+              eu.ut.setSelectedItem(""+rs.getString("u_type"));
+              eu.uss.setSelectedItem(""+rs.getString("u_status"));
+              eu.uid.setEnabled(false); // disable editing of user ID
+              eu.setVisible(true);
            this.dispose();
           }
            }catch(SQLException ex){
                System.out.println(""+ex);
            }  
        }
+ 
+       
  
        
     }//GEN-LAST:event_p_editMouseClicked
@@ -378,7 +391,6 @@ public class usersForm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Active;
-    private javax.swing.JButton Pending;
     private javax.swing.JLabel WELCOME3;
     private javax.swing.JLabel acc_fname;
     private javax.swing.JLabel acc_id;

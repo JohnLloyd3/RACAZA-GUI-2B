@@ -41,6 +41,7 @@ public class adoptionrecordspage extends javax.swing.JFrame {
         adoptionsrecord = new javax.swing.JTable();
         approve = new javax.swing.JButton();
         viewadoption = new javax.swing.JButton();
+        printcertificate = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -120,7 +121,7 @@ public class adoptionrecordspage extends javax.swing.JFrame {
                 approveActionPerformed(evt);
             }
         });
-        background.add(approve, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 100, 200, 50));
+        background.add(approve, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 100, 200, 50));
 
         viewadoption.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         viewadoption.setText("View Adoption");
@@ -134,9 +135,23 @@ public class adoptionrecordspage extends javax.swing.JFrame {
                 viewadoptionActionPerformed(evt);
             }
         });
-        background.add(viewadoption, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 100, 200, 50));
+        background.add(viewadoption, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 100, 200, 50));
 
-        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, 650));
+        printcertificate.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        printcertificate.setText("Print Certificate");
+        printcertificate.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                printcertificateMouseClicked(evt);
+            }
+        });
+        printcertificate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                printcertificateActionPerformed(evt);
+            }
+        });
+        background.add(printcertificate, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 100, 200, 50));
+
+        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, 570));
 
         pack();
         setLocationRelativeTo(null);
@@ -271,6 +286,30 @@ public class adoptionrecordspage extends javax.swing.JFrame {
         new viewadoption(adoptionId).setVisible(true);
     }//GEN-LAST:event_viewadoptionActionPerformed
 
+    private void printcertificateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_printcertificateMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_printcertificateMouseClicked
+
+    private void printcertificateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_printcertificateActionPerformed
+        int selectedRow = adoptionsrecord.getSelectedRow();
+        if (selectedRow == -1) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Please select an adoption record to print the certificate!");
+            return;
+        }
+        String adopterName = adoptionsrecord.getValueAt(selectedRow, 2).toString();
+        String adoptionDate = adoptionsrecord.getValueAt(selectedRow, 3).toString();
+        String petName = adoptionsrecord.getValueAt(selectedRow, 1).toString();
+
+        adoption.certificates certForm = new adoption.certificates();
+        certForm.setAdopterName(adopterName);
+        certForm.setAdoptionDate(adoptionDate);
+        certForm.setPetName(petName);
+        certForm.setVisible(true);
+
+        config.PanelPrinter printer = new config.PanelPrinter(certForm.jPanel1);
+        printer.printPanel();
+    }//GEN-LAST:event_printcertificateActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -317,6 +356,7 @@ public class adoptionrecordspage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel jlabel;
+    private javax.swing.JButton printcertificate;
     private javax.swing.JButton viewadoption;
     // End of variables declaration//GEN-END:variables
 }
