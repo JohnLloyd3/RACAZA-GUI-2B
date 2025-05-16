@@ -133,8 +133,8 @@ public class emailverification extends javax.swing.JFrame {
                 if (updated > 0) {
                     // Send email with reset code
                     config.EmailSender emailSender = new config.EmailSender();
-                    String fromEmail = ""; // TODO: replace with your email
-                    String emailPassword = ""; // TODO: replace with your email password or app password
+                    String fromEmail = "padoption73@gmail.com"; // TODO: replace with your email
+                    String emailPassword = "ipiz svkj npwb qbue"; // TODO: replace with your email password or app password
                     String subject = "Password Reset Code";
                     String body = "Your password reset code is: " + resetCode + "\nThis code will expire in 15 minutes.";
                     emailSender.sendEmail(fromEmail, emailPassword, userEmail, subject, body);
